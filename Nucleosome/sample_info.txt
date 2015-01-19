@@ -1,0 +1,3 @@
+One MiSeq run. This run contained three of Sean's NEB-Next libraries prepared using MNase-digested samples from 
+cells at three different salinities (0, 10 and 20% NaCl).
+
