@@ -7,7 +7,7 @@ module load picard
 CPU=$PBS_PPN
 SAMPLEFILE=samples.info
 BWA=bwa
-GENOMEIDX=/shared/stajichlab/projects/Hortea/assemblies/current/Hw_016457.fa
+GENOMEIDX=/shared/stajichlab/projects/Hortaea_werneckii/assemblies/Hw2/Hw2.fasta
 OUTPUT=bam
 QUAL=20
 
