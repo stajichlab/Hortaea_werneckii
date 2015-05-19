@@ -1,0 +1,5 @@
+param	value
+cmd_line	cuffnorm -p 8 -o cuffnorm_combined -L Sample_10.1,Sample_10.2,Sample_20.1,Sample_20.2,Sample_0.1,Sample_0.2 Hw2.maker_genes.gff3 Sample_10.1.cuffquant/abundances.cxb Sample_10.2.cuffquant/abundances.cxb Sample_20.1.cuffquant/abundances.cxb Sample_20.2.cuffquant/abundances.cxb Sample_0.1.cuffquant/abundances.cxb Sample_0.2.cuffquant/abundances.cxb 
+version	2.2.1
+SVN_revision	4237
+boost_version	104700
