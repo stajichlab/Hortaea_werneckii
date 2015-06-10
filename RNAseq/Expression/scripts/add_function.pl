@@ -1,6 +1,11 @@
 #!env perl
 use strict;
 use warnings;
+use Getopt::Long;
+
+my $debug = 0;
+
+GetOptions('v|debug!'  => \$debug);
 my $fpkm = shift || "cuffnorm/genes.fpkm_table";
 my $functional_fasta = shift || 'Hw2.pep';
 
@@ -12,8 +17,7 @@ while(<$fh>) {
 	my ($name,$function) = ($1,$2);
 	my ($gene) = split/-/,$name;
 	$gene{$gene} = $function;
-	
-	warn("name='$name' gene=$gene, function=$function\n");
+	warn("name='$name' gene=$gene, function=$function\n") if $debug;
     } else {
 	warn("Cannot match function in $_");
     }
