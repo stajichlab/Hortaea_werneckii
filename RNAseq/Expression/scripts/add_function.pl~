@@ -1,0 +1,6 @@
+#!env perl
+use strict;
+
+my $fpkm = shift;
+my $functional_fasta = shift || 'Hw2.pep';
+

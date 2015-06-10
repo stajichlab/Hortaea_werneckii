@@ -1,0 +1,28 @@
+#PBS -l nodes=1:ppn=8,mem=4gb -N cuffnorm.Bd -j oe 
+
+module load cufflinks/2.2.1
+
+CPU=$PBS_NP
+if [ ! $CPU ]; then
+ CPU=2
+fi
+
+N=$PBS_ARRAYID
+if [ ! $N ]; then
+ N=$1
+fi
+
+FILE=`ls -d *.cuffquant | head -n $N | tail -n 1`
+GFF=Hw2.maker_genes.gff3
+SAMPLE=`basename $FILE .cuffquant`
+
+cuffnorm -p $CPU -o $SAMPLE.cuffnorm $GFF $FILE/abundances.cxb
+
+Sample_0.1_L001.cuffquant
+Sample_0.1_L002.cuffquant
+Sample_0.1_L003.cuffquant
+Sample_0.1_L004.cuffquant
+Sample_0.1_L005.cuffquant
+Sample_0.1_L006.cuffquant
+Sample_0.1_L007.cuffquant
+Sample_0.1_L008.cuffquant
