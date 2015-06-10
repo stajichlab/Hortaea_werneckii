@@ -6,3 +6,4 @@ E100Hw Sample_5/5_GGACTCCT-CTCTCTAT_L002_R1_001.fastq.gz Sample_5/5_GGACTCCT-CTC
 0Hw Sample_6/6_TAGGCATG-CTCTCTAT_L002_R1_001.fastq.gz Sample_6/6_TAGGCATG-CTCTCTAT_L002_R2_001.fastq.gz
 50Hw Sample_7/7_TAAGGCGA-CTCTCTAT_L002_R1_001.fastq.gz Sample_7/7_TAAGGCGA-CTCTCTAT_L002_R2_001.fastq.gz
 100Hw Sample_8/8_CGTACTAG-CTCTCTAT_L002_R1_001.fastq.gz Sample_8/8_CGTACTAG-CTCTCTAT_L002_R2_001.fastq.gz
+100Hw_ss Sample_8_ss/out_1.fastq.gz Sample_8_ss/out_2.fastq.gz

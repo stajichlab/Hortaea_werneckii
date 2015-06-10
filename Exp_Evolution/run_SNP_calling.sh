@@ -8,7 +8,7 @@ module load picard
 
 umask 0002 # let's make sure the umask is setup write so default permissions are easier for jason to see
 
-GENOME=/shared/stajichlab/projects/Hortea/assemblies/current/Hw_016457.fa
+GENOME=/shared/stajichlab/projects/Hortaea_werneckii/assemblies/Hw2/Hw2.fasta
 
 if [ ! -f $GENOME.dict ]; then
 java -jar $PICARD/CreateSequenceDictionary.jar \

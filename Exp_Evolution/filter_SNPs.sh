@@ -7,5 +7,5 @@ java -Xmx2g -jar GenomeAnalysisTK.jar \
    -R $GENOME 
    -T SelectVariants \
    --variant ALL.gatk.snp.hardfilter.vcf \
-   -o \LL.gatk.snp.selected.vcf 
+   -o ALL.gatk.snp.selected.vcf 
    --excludeFiltered
