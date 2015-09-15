@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use List::Util qw(sum);
+use Statistics::Descriptive;
 
 my $gff = 'Hw2.maker_genes.functional.gff3.gz';
 open(my $fh => "zcat $gff |") || die $!;
@@ -26,11 +27,14 @@ while(<$fh>) {
     }
 }
 
-for my $ftype ( keys %features ) {
+for my $ftype (sort  keys %features ) {
     my $total = scalar keys %{$features{$ftype}};
     printf "%s\t%d features\n",$ftype,$total;
     if( $ftype !~ /gene/ ) {
-	printf "\t%d bp\n",sum ( values %{$features{$ftype}} );
+	printf "\t%d total bp\n",sum ( values %{$features{$ftype}} );
+	my $stats = Statistics::Descriptive::Full->new();
+	$stats->add_data([ values %{$features{$ftype}}]);
+	printf "\t%.2f median len\t%.2f mean len\n",$stats->median, $stats->mean;
     }
     print "//\n";
 }

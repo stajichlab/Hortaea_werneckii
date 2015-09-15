@@ -1,13 +1,13 @@
 #PBS -l nodes=1:ppn=8,mem=3gb,walltime=48:00:00 -j oe -N bwa
-module load bwa/0.7.9
-module load samtools/1.1
+module load bwa/0.7.12
+module load samtools/1.2
 module load java
 module load picard
 
 CPU=$PBS_PPN
 SAMPLEFILE=samples.info
 BWA=bwa
-GENOMEIDX=/shared/stajichlab/projects/Hortaea_werneckii/assemblies/Hw2/Hw2.fasta
+GENOMEIDX=/bigdata/stajichlab/shared/projects/Hortaea_werneckii/assemblies/Hw2/Hw2.fasta
 OUTPUT=bam
 QUAL=20
 
