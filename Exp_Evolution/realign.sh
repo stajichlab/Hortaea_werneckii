@@ -15,7 +15,7 @@ fi
 
 dir=bam
 bam=`head -n $N bamfiles | tail -n 1`
-prefix=`basename $bam`
+prefix=`basename $bam .DD.bam`
 GENOME=../../assemblies/Hw2/Hw2.fasta
 b=`basename $GENOME .fasta`
 genomdir=`dirname $GENOME`
@@ -24,6 +24,7 @@ if [ ! -f $genomdir/$b.dict ]; then
  java -jar $PICARD CreateSequenceDictionary R=$GENOME O=$genomdir/$b.dict SPECIES="Hortaea werneckii" TRUNCATE_NAMES_AT_WHITESPACE=true
 fi
 
+echo "file to process is $dir/$prefix.realign.bam"
 ## Identify intervals around variants
 if [ ! -e $dir/$prefix.realign.bam ]; then
 java -Xmx16g -jar $GATK \
