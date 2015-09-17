@@ -15,7 +15,7 @@ goAllFrame=GOAllFrame(goFrame)
 
 gsc <- GeneSetCollection(goAllFrame, setType = GOCollection())
 
-clusters <- read.csv("8clusters.csv.gz",
+clusters <- read.csv("8clusters.20150916.csv.gz",
                        header=F,sep=",",stringsAsFactors=F, quote="")
 head(clusters)
 max <- max(clusters$V2)
