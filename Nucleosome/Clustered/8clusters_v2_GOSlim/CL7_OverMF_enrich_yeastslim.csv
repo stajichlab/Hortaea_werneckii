@@ -1,0 +1,5 @@
+"","GOMFID","Pvalue","OddsRatio","ExpCount","Count","Size","Term"
+"1","GO:0016798",0.000160312684326215,1.78293502613891,35.2725388601036,57,366,"hydrolase activity, acting on glycosyl bonds"
+"2","GO:0016491",0.0178293212712779,1.22263435542367,140.60829015544,163,1459,"oxidoreductase activity"
+"3","GO:0001071",0.0334337387817447,1.42191518926217,28.140932642487,38,292,"nucleic acid binding transcription factor activity"
+"4","GO:0022857",0.0348060847201372,1.29269301470588,55.8,69,579,"transmembrane transporter activity"
