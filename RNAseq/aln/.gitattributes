@@ -1,0 +1,8 @@
+*.bam filter=lfs diff=lfs merge=lfs -text
+Sample_0.1.bam filter=lfs diff=lfs merge=lfs -text
+Sample_0.2.bam filter=lfs diff=lfs merge=lfs -text
+Sample_10.1.bam filter=lfs diff=lfs merge=lfs -text
+Sample_10.2.bam filter=lfs diff=lfs merge=lfs -text
+Sample_20.1.bam filter=lfs diff=lfs merge=lfs -text
+Sample_20.2.bam filter=lfs diff=lfs merge=lfs -text
+test.bam filter=lfs diff=lfs merge=lfs -text
