@@ -1,0 +1,2177 @@
+format-version: 1.2
+subsetdef: goantislim_grouping "Grouping classes that can be excluded"
+subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
+subsetdef: goslim_aspergillus "Aspergillus GO slim"
+subsetdef: goslim_candida "Candida GO slim"
+subsetdef: goslim_chembl "ChEMBL protein targets summary"
+subsetdef: goslim_generic "Generic GO slim"
+subsetdef: goslim_goa "GOA and proteome slim"
+subsetdef: goslim_metagenomics "Metagenomics GO slim"
+subsetdef: goslim_pir "PIR GO slim"
+subsetdef: goslim_plant "Plant GO slim"
+subsetdef: goslim_pombe "Fission yeast GO slim"
+subsetdef: goslim_synapse "synapse GO slim"
+subsetdef: goslim_virus "Viral GO slim"
+subsetdef: goslim_yeast "Yeast GO slim"
+subsetdef: gosubset_prok "Prokaryotic GO subset"
+subsetdef: mf_needs_review "Catalytic activity terms in need of attention"
+subsetdef: termgenie_unvetted "Terms created by TermGenie that do not follow a template and require additional vetting by editors"
+subsetdef: virus_checked "Viral overhaul terms"
+synonymtypedef: systematic_synonym "Systematic synonym" EXACT
+ontology: go/subsets/goslim_candida
+
+[Term]
+id: GO:0000746
+name: conjugation
+namespace: biological_process
+def: "The union or introduction of genetic information from compatible mating types that results in a genetically different individual. Conjugation requires direct cellular contact between the organisms." [GOC:elh]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Wikipedia:Conjugation
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0000910
+name: cytokinesis
+namespace: biological_process
+alt_id: GO:0007104
+alt_id: GO:0016288
+alt_id: GO:0033205
+def: "The division of the cytoplasm and the plasma membrane of a cell and its partitioning into two daughter cells." [GOC:mtg_cell_cycle]
+comment: Note that when annotating eukaryotic species, mitotic or meiotic cytokinesis should always be specified for manual annotation and for prokaryotic species use 'FtsZ-dependent cytokinesis ; GO:0043093' or Cdv-dependent cytokinesis ; GO:0061639.  Also, note that cytokinesis does not necessarily result in physical separation and detachment of the two daughter cells from each other.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "cell cycle cytokinesis" EXACT []
+synonym: "cytokinesis involved in cell cycle" EXACT [GOC:dph, GOC:tb]
+xref: Reactome:REACT_101918 "Mitotic Telophase /Cytokinesis, Mus musculus"
+xref: Reactome:REACT_108805 "Mitotic Telophase /Cytokinesis, Dictyostelium discoideum"
+xref: Reactome:REACT_1932 "Mitotic Telophase /Cytokinesis, Homo sapiens"
+xref: Reactome:REACT_30667 "Mitotic Telophase /Cytokinesis, Schizosaccharomyces pombe"
+xref: Reactome:REACT_32636 "Mitotic Telophase /Cytokinesis, Bos taurus"
+xref: Reactome:REACT_78494 "Mitotic Telophase /Cytokinesis, Danio rerio"
+xref: Reactome:REACT_84722 "Mitotic Telophase /Cytokinesis, Gallus gallus"
+xref: Reactome:REACT_87726 "Mitotic Telophase /Cytokinesis, Xenopus tropicalis"
+xref: Reactome:REACT_92849 "Mitotic Telophase /Cytokinesis, Taeniopygia guttata"
+xref: Reactome:REACT_93374 "Mitotic Telophase /Cytokinesis, Canis familiaris"
+xref: Reactome:REACT_94382 "Mitotic Telophase /Cytokinesis, Drosophila melanogaster"
+xref: Reactome:REACT_98952 "Mitotic Telophase /Cytokinesis, Rattus norvegicus"
+xref: Reactome:REACT_99118 "Mitotic Telophase /Cytokinesis, Caenorhabditis elegans"
+xref: Wikipedia:Cytokinesis
+is_a: GO:0008150 ! biological_process
+relationship: has_part GO:0008150 ! biological_process
+relationship: part_of GO:0007049 ! cell cycle
+
+[Term]
+id: GO:0000988
+name: transcription factor activity, protein binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules), in order to modulate transcription. A protein binding transcription factor may or may not also interact with the template nucleic acid (either DNA or RNA) as well." [GOC:txnOH]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. This term does not provide specificity with respect to the type of protein binding, e.g. transcription factor binding or RNA polymerase binding. Please use a child term that provides that specificity or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_yeast
+synonym: "protein binding transcription factor activity" EXACT []
+synonym: "transcription factor activity" BROAD []
+is_a: GO:0003674 ! molecular_function
+relationship: has_part GO:0005515 ! protein binding
+relationship: part_of GO:0050789 ! regulation of biological process
+created_by: kchris
+creation_date: 2010-08-10T04:03:22Z
+
+[Term]
+id: GO:0001411
+name: hyphal tip
+namespace: cellular_component
+def: "The end, or tip, of a fungal hypha, where polarized growth occurs during hyphal elongation." [GOC:mcc]
+subset: goslim_candida
+is_a: GO:0030427 ! site of polarized growth
+
+[Term]
+id: GO:0003674
+name: molecular_function
+namespace: molecular_function
+alt_id: GO:0005554
+def: "Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions." [GOC:go_curators]
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. Note that when this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "molecular function" EXACT []
+
+[Term]
+id: GO:0003677
+name: DNA binding
+namespace: molecular_function
+def: "Any molecular function by which a gene product interacts selectively and non-covalently with DNA (deoxyribonucleic acid)." [GOC:dph, GOC:jl, GOC:tb, GOC:vw]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "microtubule/chromatin interaction" RELATED []
+synonym: "plasmid binding" NARROW []
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0003723
+name: RNA binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with an RNA molecule or a portion thereof." [GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Reactome:REACT_101703 "Exportin-5 recognizes 3' overhang of pre-miRNA, Xenopus tropicalis"
+xref: Reactome:REACT_103323 "Exportin-5 recognizes 3' overhang of pre-miRNA, Dictyostelium discoideum"
+xref: Reactome:REACT_106430 "Exportin-5 recognizes 3' overhang of pre-miRNA, Mus musculus"
+xref: Reactome:REACT_107757 "Exportin-5 recognizes 3' overhang of pre-miRNA, Drosophila melanogaster"
+xref: Reactome:REACT_108232 "Exportin-5 recognizes 3' overhang of pre-miRNA, Oryza sativa"
+xref: Reactome:REACT_108368 "Exportin-5 recognizes 3' overhang of pre-miRNA, Saccharomyces cerevisiae"
+xref: Reactome:REACT_109723 "Exportin-5 recognizes 3' overhang of pre-miRNA, Arabidopsis thaliana"
+xref: Reactome:REACT_12458 "Exportin-5 recognizes 3' overhang of pre-miRNA, Homo sapiens"
+xref: Reactome:REACT_29965 "Exportin-5 recognizes 3' overhang of pre-miRNA, Canis familiaris"
+xref: Reactome:REACT_77167 "Exportin-5 recognizes 3' overhang of pre-miRNA, Gallus gallus"
+xref: Reactome:REACT_78197 "Exportin-5 recognizes 3' overhang of pre-miRNA, Sus scrofa"
+xref: Reactome:REACT_87164 "Exportin-5 recognizes 3' overhang of pre-miRNA, Schizosaccharomyces pombe"
+xref: Reactome:REACT_89329 "Exportin-5 recognizes 3' overhang of pre-miRNA, Rattus norvegicus"
+xref: Reactome:REACT_90531 "Exportin-5 recognizes 3' overhang of pre-miRNA, Danio rerio"
+xref: Reactome:REACT_98683 "Exportin-5 recognizes 3' overhang of pre-miRNA, Taeniopygia guttata"
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0003774
+name: motor activity
+namespace: molecular_function
+def: "Catalysis of the generation of force resulting either in movement along a microfilament or microtubule, or in torque resulting in membrane scission, coupled to the hydrolysis of a nucleoside triphosphate." [GOC:mah, GOC:vw, ISBN:0815316194, PMID:11242086]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+is_a: GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0004386
+name: helicase activity
+namespace: molecular_function
+def: "Catalysis of the reaction: NTP + H2O = NDP + phosphate, to drive the unwinding of a DNA or RNA helix." [GOC:mah, ISBN:0198506732]
+comment: Note that most helicases catalyze processive duplex unwinding.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Reactome:REACT_101111 "Addition of the third nucleotide on the nascent transcript, Saccharomyces cerevisiae"
+xref: Reactome:REACT_101247 "Formation of open bubble structure in DNA by helicases, Bos taurus"
+xref: Reactome:REACT_101622 "MCM8 mediated fork unwinding, Danio rerio"
+xref: Reactome:REACT_101644 "Formation of open bubble structure in DNA by helicases, Oryza sativa"
+xref: Reactome:REACT_101823 "MCM2-7 mediated fork unwinding, Plasmodium falciparum"
+xref: Reactome:REACT_101994 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Xenopus tropicalis"
+xref: Reactome:REACT_102121 "Addition of the third nucleotide on the nascent transcript, Rattus norvegicus"
+xref: Reactome:REACT_102441 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Gallus gallus"
+xref: Reactome:REACT_102560 "MCM2-7 mediated fork unwinding, Oryza sativa"
+xref: Reactome:REACT_1033 "Formation of open bubble structure in DNA by helicases, Homo sapiens"
+xref: Reactome:REACT_103861 "MCM8 mediated fork unwinding, Bos taurus"
+xref: Reactome:REACT_103881 "RNA Polymerase II Promoter Opening: First Transition, Dictyostelium discoideum"
+xref: Reactome:REACT_103897 "MCM8 mediated fork unwinding, Mus musculus"
+xref: Reactome:REACT_103959 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Rattus norvegicus"
+xref: Reactome:REACT_104221 "MCM2-7 mediated fork unwinding, Rattus norvegicus"
+xref: Reactome:REACT_105950 "MCM2-7 mediated fork unwinding, Xenopus tropicalis"
+xref: Reactome:REACT_106346 "Formation of open bubble structure in DNA by helicases, Taeniopygia guttata"
+xref: Reactome:REACT_107072 "Formation of open bubble structure in DNA by helicases, Mus musculus"
+xref: Reactome:REACT_107495 "RNA Polymerase II Promoter Opening: First Transition, Taeniopygia guttata"
+xref: Reactome:REACT_108159 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Dictyostelium discoideum"
+xref: Reactome:REACT_108648 "Addition of the third nucleotide on the nascent transcript, Arabidopsis thaliana"
+xref: Reactome:REACT_108654 "MCM2-7 mediated fork unwinding, Schizosaccharomyces pombe"
+xref: Reactome:REACT_109035 "RNA Polymerase II Promoter Opening: First Transition, Schizosaccharomyces pombe"
+xref: Reactome:REACT_109161 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Arabidopsis thaliana"
+xref: Reactome:REACT_110588 "MCM8 mediated fork unwinding, Xenopus tropicalis"
+xref: Reactome:REACT_110827 "Formation of open bubble structure in DNA by helicases, Danio rerio"
+xref: Reactome:REACT_110845 "Cap-bound mRNA is activated by helicases, Mus musculus"
+xref: Reactome:REACT_112208 "MCM8 mediated fork unwinding, Drosophila melanogaster"
+xref: Reactome:REACT_112817 "Cap-bound mRNA is activated by helicases, Schizosaccharomyces pombe"
+xref: Reactome:REACT_113177 "Formation of open bubble structure in DNA by helicases, Caenorhabditis elegans"
+xref: Reactome:REACT_1521 "Cap-bound mRNA is activated by helicases, Homo sapiens"
+xref: Reactome:REACT_1817 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Homo sapiens"
+xref: Reactome:REACT_1844 "RNA Polymerase II Promoter Opening: First Transition, Homo sapiens"
+xref: Reactome:REACT_28131 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Drosophila melanogaster"
+xref: Reactome:REACT_28343 "MCM2-7 mediated fork unwinding, Danio rerio"
+xref: Reactome:REACT_28810 "Addition of the third nucleotide on the nascent transcript, Oryza sativa"
+xref: Reactome:REACT_28880 "MCM2-7 mediated fork unwinding, Drosophila melanogaster"
+xref: Reactome:REACT_29155 "Addition of the third nucleotide on the nascent transcript, Drosophila melanogaster"
+xref: Reactome:REACT_29217 "Formation of open bubble structure in DNA by helicases, Xenopus tropicalis"
+xref: Reactome:REACT_29818 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Oryza sativa"
+xref: Reactome:REACT_29850 "RNA Polymerase II Promoter Opening: First Transition, Saccharomyces cerevisiae"
+xref: Reactome:REACT_30013 "MCM8 mediated fork unwinding, Rattus norvegicus"
+xref: Reactome:REACT_30989 "MCM8 mediated fork unwinding, Arabidopsis thaliana"
+xref: Reactome:REACT_31034 "Cap-bound mRNA is activated by helicases, Danio rerio"
+xref: Reactome:REACT_31090 "MCM2-7 mediated fork unwinding, Gallus gallus"
+xref: Reactome:REACT_31554 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Schizosaccharomyces pombe"
+xref: Reactome:REACT_32533 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Caenorhabditis elegans"
+xref: Reactome:REACT_33205 "MCM8 mediated fork unwinding, Canis familiaris"
+xref: Reactome:REACT_34016 "Formation of open bubble structure in DNA by helicases, Rattus norvegicus"
+xref: Reactome:REACT_34089 "MCM2-7 mediated fork unwinding, Dictyostelium discoideum"
+xref: Reactome:REACT_34560 "MCM8 mediated fork unwinding, Sus scrofa"
+xref: Reactome:REACT_40 "Addition of the third nucleotide on the nascent transcript, Homo sapiens"
+xref: Reactome:REACT_6134 "HIV-1 Promoter Opening: First Transition, Homo sapiens"
+xref: Reactome:REACT_6184 "Addition of the fourth nucleotide on the nascent HIV-1 transcript: Second Transition, Homo sapiens"
+xref: Reactome:REACT_6325 "Addition of the third nucleotide on the nascent HIV-1 transcript, Homo sapiens"
+xref: Reactome:REACT_6758 "Xenopus Mcm8 mediated fork unwinding, Xenopus laevis"
+xref: Reactome:REACT_6768 "MCM8 mediated fork unwinding, Homo sapiens"
+xref: Reactome:REACT_6853 "Yeast Mcm2-7 mediated fork unwinding, Saccharomyces cerevisiae"
+xref: Reactome:REACT_6922 "MCM2-7 mediated fork unwinding, Homo sapiens"
+xref: Reactome:REACT_78086 "RNA Polymerase II Promoter Opening: First Transition, Rattus norvegicus"
+xref: Reactome:REACT_78462 "Formation of open bubble structure in DNA by helicases, Drosophila melanogaster"
+xref: Reactome:REACT_78667 "MCM2-7 mediated fork unwinding, Canis familiaris"
+xref: Reactome:REACT_78771 "MCM8 mediated fork unwinding, Dictyostelium discoideum"
+xref: Reactome:REACT_79759 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Mus musculus"
+xref: Reactome:REACT_80107 "RNA Polymerase II Promoter Opening: First Transition, Arabidopsis thaliana"
+xref: Reactome:REACT_80325 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Danio rerio"
+xref: Reactome:REACT_80500 "MCM8 mediated fork unwinding, Gallus gallus"
+xref: Reactome:REACT_80532 "Addition of the third nucleotide on the nascent transcript, Gallus gallus"
+xref: Reactome:REACT_80605 "Addition of the third nucleotide on the nascent transcript, Mus musculus"
+xref: Reactome:REACT_81126 "Addition of the third nucleotide on the nascent transcript, Schizosaccharomyces pombe"
+xref: Reactome:REACT_81335 "RNA Polymerase II Promoter Opening: First Transition, Gallus gallus"
+xref: Reactome:REACT_81427 "MCM8 mediated fork unwinding, Taeniopygia guttata"
+xref: Reactome:REACT_81441 "MCM8 mediated fork unwinding, Oryza sativa"
+xref: Reactome:REACT_81682 "Formation of open bubble structure in DNA by helicases, Canis familiaris"
+xref: Reactome:REACT_82776 "RNA Polymerase II Promoter Opening: First Transition, Danio rerio"
+xref: Reactome:REACT_83794 "Formation of open bubble structure in DNA by helicases, Gallus gallus"
+xref: Reactome:REACT_84565 "Formation of open bubble structure in DNA by helicases, Schizosaccharomyces pombe"
+xref: Reactome:REACT_84574 "Cap-bound mRNA is activated by helicases, Canis familiaris"
+xref: Reactome:REACT_84809 "MCM2-7 mediated fork unwinding, Mus musculus"
+xref: Reactome:REACT_84907 "MCM2-7 mediated fork unwinding, Taeniopygia guttata"
+xref: Reactome:REACT_85111 "Cap-bound mRNA is activated by helicases, Drosophila melanogaster"
+xref: Reactome:REACT_85172 "MCM2-7 mediated fork unwinding, Arabidopsis thaliana"
+xref: Reactome:REACT_86220 "MCM2-7 mediated fork unwinding, Caenorhabditis elegans"
+xref: Reactome:REACT_88362 "Addition of the third nucleotide on the nascent transcript, Caenorhabditis elegans"
+xref: Reactome:REACT_89000 "MCM2-7 mediated fork unwinding, Bos taurus"
+xref: Reactome:REACT_89030 "Formation of open bubble structure in DNA by helicases, Saccharomyces cerevisiae"
+xref: Reactome:REACT_89363 "Addition of the third nucleotide on the nascent transcript, Xenopus tropicalis"
+xref: Reactome:REACT_89694 "RNA Polymerase II Promoter Opening: First Transition, Drosophila melanogaster"
+xref: Reactome:REACT_91822 "MCM8 mediated fork unwinding, Plasmodium falciparum"
+xref: Reactome:REACT_93391 "RNA Polymerase II Promoter Opening: First Transition, Oryza sativa"
+xref: Reactome:REACT_93711 "RNA Polymerase II Promoter Opening: First Transition, Mus musculus"
+xref: Reactome:REACT_94645 "RNA Polymerase II Promoter Opening: First Transition, Xenopus tropicalis"
+xref: Reactome:REACT_94679 "RNA Polymerase II Promoter Opening: First Transition, Caenorhabditis elegans"
+xref: Reactome:REACT_95942 "Addition of the fourth nucleotide on the Nascent Transcript: Second Transition, Saccharomyces cerevisiae"
+xref: Reactome:REACT_95993 "Formation of open bubble structure in DNA by helicases, Arabidopsis thaliana"
+xref: Reactome:REACT_98273 "Addition of the third nucleotide on the nascent transcript, Dictyostelium discoideum"
+xref: Reactome:REACT_98302 "Formation of open bubble structure in DNA by helicases, Sus scrofa"
+xref: Reactome:REACT_98745 "Cap-bound mRNA is activated by helicases, Xenopus tropicalis"
+xref: Reactome:REACT_99120 "Addition of the third nucleotide on the nascent transcript, Danio rerio"
+is_a: GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0004672
+name: protein kinase activity
+namespace: molecular_function
+alt_id: GO:0050222
+def: "Catalysis of the phosphorylation of an amino acid residue in a protein, usually according to the reaction: a protein + ATP = a phosphoprotein + ADP." [MetaCyc:PROTEIN-KINASE-RXN]
+comment: Note that triphosphate is used as a phosphate donor by at least one kinase.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_metagenomics
+subset: gosubset_prok
+synonym: "protamine kinase activity" NARROW []
+xref: MetaCyc:PROTEIN-KINASE-RXN
+xref: Reactome:REACT_100389 "Phosphorylation and Release of IRF3 or IRF7, Bos taurus"
+xref: Reactome:REACT_100723 "Phosphorylation of p130Cas by SRC-FADK1 complex, Canis familiaris"
+xref: Reactome:REACT_100866 "Phosphorylation and activation of Ezrin, Gallus gallus"
+xref: Reactome:REACT_101171 "Phosphorylation and release of IRF3/IRF7, Rattus norvegicus"
+xref: Reactome:REACT_101316 "Autophosphorylation of FADK1 at Y397, Rattus norvegicus"
+xref: Reactome:REACT_102340 "Activated Src activates ERK, Danio rerio"
+xref: Reactome:REACT_102368 "Phosphorylation and Release of IRF3 or IRF7, Gallus gallus"
+xref: Reactome:REACT_104931 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Gallus gallus"
+xref: Reactome:REACT_104987 "Phosphorylation of pFADK1 by SRC, Danio rerio"
+xref: Reactome:REACT_105344 "Phosphorylation of p130Cas by SRC-FADK1 complex, Sus scrofa"
+xref: Reactome:REACT_106425 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Taeniopygia guttata"
+xref: Reactome:REACT_106633 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Sus scrofa"
+xref: Reactome:REACT_107161 "Phosphorylation and release of IRF3/IRF7, Taeniopygia guttata"
+xref: Reactome:REACT_107646 "Phosphorylation and release of IRF3/IRF7, Canis familiaris"
+xref: Reactome:REACT_107914 "(Frs2)Rap1-GTP binds to and activates B-Raf, Xenopus tropicalis"
+xref: Reactome:REACT_108319 "Activated Src activates ERK, Xenopus tropicalis"
+xref: Reactome:REACT_108693 "Phosphorylation and release of IRF3/IRF7, Mus musculus"
+xref: Reactome:REACT_109624 "Phosphorylation of p130Cas by SRC-FADK1 complex, Rattus norvegicus"
+xref: Reactome:REACT_110105 "Phosphorylation and activation of Ezrin, Canis familiaris"
+xref: Reactome:REACT_110177 "Autophosphorylation of FADK1 at Y397, Mus musculus"
+xref: Reactome:REACT_110248 "Activated Src activates ERK, Canis familiaris"
+xref: Reactome:REACT_111075 "Phosphorylation of LIN52 component of MuvB by DYRK1A, Homo sapiens"
+xref: Reactome:REACT_111995 "Phosphorylation of p130Cas by SRC-FADK1 complex, Drosophila melanogaster"
+xref: Reactome:REACT_112267 "Autophosphorylation of FADK1 at Y397, Drosophila melanogaster"
+xref: Reactome:REACT_112918 "Phosphorylation and activation of Ezrin, Caenorhabditis elegans"
+xref: Reactome:REACT_113100 "Activated Src activates ERK, Drosophila melanogaster"
+xref: Reactome:REACT_113334 "PKC phosphorylates GRK2, Caenorhabditis elegans"
+xref: Reactome:REACT_113440 "Phosphorylation and release of IRF3/IRF7, Xenopus tropicalis"
+xref: Reactome:REACT_113589 "Phosphorylation of pFADK1 by SRC, Drosophila melanogaster"
+xref: Reactome:REACT_113821 "Activated Src activates ERK, Caenorhabditis elegans"
+xref: Reactome:REACT_114093 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Danio rerio"
+xref: Reactome:REACT_114693 "Phosphorylation of pFADK1 by SRC, Xenopus tropicalis"
+xref: Reactome:REACT_115673 "PIP2 to PIP3 conversion by PI3K bound to GRB2:GAB1 in complex with phosphorylated heterodimer of ERBB2 and EGFR, Homo sapiens"
+xref: Reactome:REACT_115712 "Conversion of PIP2 into PIP3 by PI3K bound to p-ERBB4cyt1 homodimers, Homo sapiens"
+xref: Reactome:REACT_115868 "Phosphorylation of c-Abl and Arg by ATM, Gallus gallus"
+xref: Reactome:REACT_116057 "PIP2 to PIP3 conversion by PI3K bound to phosphorylated heterodimer of ERBB2 and ERBB4 CYT1, Homo sapiens"
+xref: Reactome:REACT_116116 "PIP2 to PIP3 conversion by PI3K bound to phosphorylated heterodimer of ERBB2 and ERBB3, Homo sapiens"
+xref: Reactome:REACT_12050 "(Frs2)Rap1-GTP binds to and activates B-Raf, Homo sapiens"
+xref: Reactome:REACT_1325 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Homo sapiens"
+xref: Reactome:REACT_15368 "Phosphorylation of pFADK1 by SRC, Homo sapiens"
+xref: Reactome:REACT_15375 "Phosphorylation of p130Cas by SRC-FADK1 complex, Homo sapiens"
+xref: Reactome:REACT_15534 "PKC phosphorylates GRK2, Homo sapiens"
+xref: Reactome:REACT_15535 "Autophosphorylation of FADK1 at Y397, Homo sapiens"
+xref: Reactome:REACT_161 "rLkb-1 (Stk-11) activates AMPK by phosphorylation, Rattus norvegicus"
+xref: Reactome:REACT_1825 "INF-gamma induced phosphorylation of L13a, Homo sapiens"
+xref: Reactome:REACT_19374 "Phosphorylation of Plexin-A, Mus musculus"
+xref: Reactome:REACT_22301 "Phosphorylation and activation of Ezrin, Homo sapiens"
+xref: Reactome:REACT_22305 "Phosphorylation of FADK1, Mus musculus"
+xref: Reactome:REACT_23900 "Activated Src activates ERK, Homo sapiens"
+xref: Reactome:REACT_24935 "Activation of IKK by MEKK1, Homo sapiens"
+xref: Reactome:REACT_25200 "IRAK1 phosphorylates Pellino, Homo sapiens"
+xref: Reactome:REACT_25213 "Phosphorylation of IRAK2 bound to the activated IRAK4:MyD88 oligomer:Mal:activated TLR complex, Homo sapiens"
+xref: Reactome:REACT_25241 "IRAK1 phosphorylates Pellino upon TLR7/8 or 9 activation, Homo sapiens"
+xref: Reactome:REACT_25327 "Phosphorylation and release of IRF7, Homo sapiens"
+xref: Reactome:REACT_25368 "Phosphorylation and release of IRF3/IRF7, Homo sapiens"
+xref: Reactome:REACT_27151 "Multiple IRAK1 autophosphorylation within the complex p-IRAK4:oligo MyD88:activated TLR, Homo sapiens"
+xref: Reactome:REACT_27163 "Second phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR complex, Homo sapiens"
+xref: Reactome:REACT_27165 "Phosphorylation of IRAK2 bound to the activated IRAK4:MyD88 oligomerl:activated TLR5 or 10 complex, Homo sapiens"
+xref: Reactome:REACT_27228 "First phosphorylation of IRAK1 by IRAK4 bound to MyD88:activated TLR, Homo sapiens"
+xref: Reactome:REACT_29590 "PKC phosphorylates GRK2, Rattus norvegicus"
+xref: Reactome:REACT_29816 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Drosophila melanogaster"
+xref: Reactome:REACT_30885 "Phosphorylation of p130Cas by SRC-FADK1 complex, Bos taurus"
+xref: Reactome:REACT_31028 "Autophosphorylation of FADK1 at Y397, Sus scrofa"
+xref: Reactome:REACT_31157 "Phosphorylation of pFADK1 by SRC, Canis familiaris"
+xref: Reactome:REACT_31403 "Autophosphorylation of FADK1 at Y397, Gallus gallus"
+xref: Reactome:REACT_32448 "Phosphorylation of pFADK1 by SRC, Bos taurus"
+xref: Reactome:REACT_32744 "PKC phosphorylates GRK2, Mus musculus"
+xref: Reactome:REACT_33098 "PKC phosphorylates GRK2, Canis familiaris"
+xref: Reactome:REACT_33973 "Phosphorylation and Release of IRF3 or IRF7, Canis familiaris"
+xref: Reactome:REACT_34630 "(Frs2)Rap1-GTP binds to and activates B-Raf, Danio rerio"
+xref: Reactome:REACT_6227 "Activated DTOR also phosphorylates D4EBP, Drosophila melanogaster"
+xref: Reactome:REACT_6236 "Activated DTOR phosphorylates DS6K, Drosophila melanogaster"
+xref: Reactome:REACT_6842 "Phosphorylation and Release of IRF3 or IRF7, Homo sapiens"
+xref: Reactome:REACT_6862 "Multiple IRAK1 autophosphorylation steps, Homo sapiens"
+xref: Reactome:REACT_72123 "PKC phosphorylates GRK2, Sus scrofa"
+xref: Reactome:REACT_75763 "Phosphorylation and release of IRF3, Gallus gallus"
+xref: Reactome:REACT_75767 "Phosphorylation of IKKs complex mediated by MEKK1, Gallus gallus"
+xref: Reactome:REACT_77320 "Phosphorylation and release of IRF3/IRF7, Gallus gallus"
+xref: Reactome:REACT_77352 "Phosphorylation of p130Cas by SRC-FADK1 complex, Danio rerio"
+xref: Reactome:REACT_78568 "Phosphorylation and activation of Ezrin, Danio rerio"
+xref: Reactome:REACT_79546 "Activated Src activates ERK, Gallus gallus"
+xref: Reactome:REACT_80382 "Phosphorylation and activation of Ezrin, Mus musculus"
+xref: Reactome:REACT_81116 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Canis familiaris"
+xref: Reactome:REACT_81601 "Autophosphorylation of FADK1 at Y397, Bos taurus"
+xref: Reactome:REACT_81960 "PKC phosphorylates GRK2, Drosophila melanogaster"
+xref: Reactome:REACT_82440 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Xenopus tropicalis"
+xref: Reactome:REACT_82942 "Activated Src activates ERK, Bos taurus"
+xref: Reactome:REACT_83498 "Activated Src activates ERK, Taeniopygia guttata"
+xref: Reactome:REACT_83992 "(Frs2)Rap1-GTP binds to and activates B-Raf, Mus musculus"
+xref: Reactome:REACT_84298 "Autophosphorylation of FADK1 at Y397, Danio rerio"
+xref: Reactome:REACT_84426 "Phosphorylation and Release of IRF3 or IRF7, Taeniopygia guttata"
+xref: Reactome:REACT_85334 "PKC phosphorylates GRK2, Bos taurus"
+xref: Reactome:REACT_85934 "Autophosphorylation of FADK1 at Y397, Canis familiaris"
+xref: Reactome:REACT_86784 "Autophosphorylation of FADK1 at Y397, Taeniopygia guttata"
+xref: Reactome:REACT_86846 "Activated Src activates ERK, Mus musculus"
+xref: Reactome:REACT_87050 "Phosphorylation of pFADK1 by SRC, Mus musculus"
+xref: Reactome:REACT_87514 "Phosphorylation and activation of Ezrin, Sus scrofa"
+xref: Reactome:REACT_87874 "Phosphorylation of pFADK1 by SRC, Sus scrofa"
+xref: Reactome:REACT_87926 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Bos taurus"
+xref: Reactome:REACT_88017 "PKC phosphorylates GRK2, Taeniopygia guttata"
+xref: Reactome:REACT_88090 "Phosphorylation and release of IRF3/IRF7, Bos taurus"
+xref: Reactome:REACT_88178 "Phosphorylation and release of IRF3/IRF7, Sus scrofa"
+xref: Reactome:REACT_88344 "(Frs2)Rap1-GTP binds to and activates B-Raf, Sus scrofa"
+xref: Reactome:REACT_88685 "Phosphorylation of p130Cas by SRC-FADK1 complex, Xenopus tropicalis"
+xref: Reactome:REACT_89390 "(Frs2)Rap1-GTP binds to and activates B-Raf, Bos taurus"
+xref: Reactome:REACT_90060 "Autophosphorylation of FADK1 at Y397, Xenopus tropicalis"
+xref: Reactome:REACT_90671 "Phosphorylation and activation of Ezrin, Xenopus tropicalis"
+xref: Reactome:REACT_90879 "Phosphorylation of p130Cas by SRC-FADK1 complex, Gallus gallus"
+xref: Reactome:REACT_91096 "Activated Src activates ERK, Sus scrofa"
+xref: Reactome:REACT_93160 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Mus musculus"
+xref: Reactome:REACT_93476 "(Frs2)Rap1-GTP binds to and activates B-Raf, Canis familiaris"
+xref: Reactome:REACT_93547 "Activated Src activates ERK, Rattus norvegicus"
+xref: Reactome:REACT_94091 "Phosphorylation and activation of Ezrin, Bos taurus"
+xref: Reactome:REACT_95384 "Phosphorylation and Release of IRF3 or IRF7, Mus musculus"
+xref: Reactome:REACT_96044 "Phosphorylation of p130Cas by SRC-FADK1 complex, Mus musculus"
+xref: Reactome:REACT_96155 "Phosphorylation and release of IRF3/IRF7, Danio rerio"
+xref: Reactome:REACT_96307 "Phosphorylation and Release of IRF3 or IRF7, Danio rerio"
+xref: Reactome:REACT_96320 "Phosphorylation and activation of Ezrin, Rattus norvegicus"
+xref: Reactome:REACT_96822 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Dictyostelium discoideum"
+xref: Reactome:REACT_96873 "LKB1 phosphorylates the alpha subunit of AMPK heterotrimer, Caenorhabditis elegans"
+xref: Reactome:REACT_97267 "PKC phosphorylates GRK2, Gallus gallus"
+xref: Reactome:REACT_97501 "(Frs2)Rap1-GTP binds to and activates B-Raf, Taeniopygia guttata"
+xref: Reactome:REACT_97784 "Phosphorylation and activation of Ezrin, Taeniopygia guttata"
+xref: Reactome:REACT_98334 "Phosphorylation of pFADK1 by SRC, Rattus norvegicus"
+xref: Reactome:REACT_98994 "(Frs2)Rap1-GTP binds to and activates B-Raf, Gallus gallus"
+xref: Reactome:REACT_99274 "Phosphorylation of p130Cas by SRC-FADK1 complex, Taeniopygia guttata"
+is_a: GO:0016740 ! transferase activity
+relationship: part_of GO:0006464 ! cellular protein modification process
+
+[Term]
+id: GO:0004871
+name: signal transducer activity
+namespace: molecular_function
+alt_id: GO:0005062
+alt_id: GO:0009369
+alt_id: GO:0009370
+def: "Conveys a signal across a cell to trigger a change in cell function or state. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:go_curators]
+comment: Ligands do NOT have the molecular function 'signal transducer activity'.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "hematopoietin/interferon-class (D200-domain) cytokine receptor signal transducer activity" NARROW []
+synonym: "quorum sensing response regulator activity" NARROW []
+synonym: "quorum sensing signal generator activity" NARROW []
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0005198
+name: structural molecule activity
+namespace: molecular_function
+def: "The action of a molecule that contributes to the structural integrity of a complex or assembly within or outside a cell." [GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0005215
+name: transporter activity
+namespace: molecular_function
+alt_id: GO:0005478
+def: "Enables the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells." [GOC:ai, GOC:dgf]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "small-molecule carrier or transporter" RELATED []
+xref: Reactome:REACT_6315 "Virion-associated M2 protein mediated ion infusion, Homo sapiens"
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0006810 ! transport
+
+[Term]
+id: GO:0005515
+name: protein binding
+namespace: molecular_function
+alt_id: GO:0045308
+def: "Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules)." [GOC:go_curators]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "alpha-2 macroglobulin receptor-associated protein activity" RELATED []
+synonym: "protein amino acid binding" EXACT []
+synonym: "protein degradation tagging activity" RELATED []
+synonym: "protein folding chaperone" NARROW [GOC:dph, GOC:mah, GOC:tb]
+synonym: "protein tagging activity" RELATED []
+xref: Reactome:REACT_100287 "Formation of the IGF:IGFBP-4 Complex, Canis familiaris"
+xref: Reactome:REACT_101129 "Formation of the IGF:IGFBP-3:ALS Complex, Rattus norvegicus"
+xref: Reactome:REACT_102084 "Formation of the IGF:IGFBP-5:ALS Complex, Mus musculus"
+xref: Reactome:REACT_102457 "An anchoring protein, SARA, recruits SMAD2/3, Canis familiaris"
+xref: Reactome:REACT_103972 "Type II receptor recruits type I receptor, Xenopus tropicalis"
+xref: Reactome:REACT_104029 "Formation of the IGF:IGFBP-6 Complex, Bos taurus"
+xref: Reactome:REACT_104599 "Type II receptor recruits type I receptor, Sus scrofa"
+xref: Reactome:REACT_105776 "Formation of the IGF:IGFBP-3:ALS Complex, Danio rerio"
+xref: Reactome:REACT_105895 "Formation of the IGF:IGFBP-4 Complex, Bos taurus"
+xref: Reactome:REACT_106168 "Formation of the IGF:IGFBP-2 Complex, Bos taurus"
+xref: Reactome:REACT_106189 "Formation of the IGF:IGFBP-5:ALS Complex, Gallus gallus"
+xref: Reactome:REACT_107402 "Formation of the IGF:IGFBP-4 Complex, Mus musculus"
+xref: Reactome:REACT_108283 "Formation of the IGF:IGFBP-4 Complex, Xenopus tropicalis"
+xref: Reactome:REACT_109392 "Formation of the IGF:IGFBP-3:ALS Complex, Gallus gallus"
+xref: Reactome:REACT_110419 "Type II receptor recruits type I receptor, Bos taurus"
+xref: Reactome:REACT_110570 "Formation of the IGF:IGFBP-3:ALS Complex, Sus scrofa"
+xref: Reactome:REACT_15321 "Formation of the IGF:IGFBP-1 Complex, Homo sapiens"
+xref: Reactome:REACT_15325 "Formation of the IGF:IGFBP-4 Complex, Homo sapiens"
+xref: Reactome:REACT_15355 "Formation of the IGF:IGFBP-5:ALS Complex, Homo sapiens"
+xref: Reactome:REACT_15417 "Formation of the IGF:IGFBP-3:ALS Complex, Homo sapiens"
+xref: Reactome:REACT_15419 "Formation of the IGF:IGFBP-2 Complex, Homo sapiens"
+xref: Reactome:REACT_15506 "Formation of the IGF:IGFBP-6 Complex, Homo sapiens"
+xref: Reactome:REACT_15541 "Traversal of the cortical actin network and docking at plasma membrane, Homo sapiens"
+xref: Reactome:REACT_20509 "Exocytosis of Insulin, Mus musculus"
+xref: Reactome:REACT_20539 "Traversal of the cortical actin network., Mus musculus"
+xref: Reactome:REACT_28794 "Formation of the IGF:IGFBP-4 Complex, Sus scrofa"
+xref: Reactome:REACT_30571 "Formation of the IGF:IGFBP-6 Complex, Danio rerio"
+xref: Reactome:REACT_30672 "Formation of the IGF:IGFBP-2 Complex, Taeniopygia guttata"
+xref: Reactome:REACT_31305 "Formation of the IGF:IGFBP-3:ALS Complex, Taeniopygia guttata"
+xref: Reactome:REACT_31537 "Formation of the IGF:IGFBP-6 Complex, Rattus norvegicus"
+xref: Reactome:REACT_31641 "Type II receptor recruits type I receptor, Danio rerio"
+xref: Reactome:REACT_31648 "An anchoring protein, SARA, recruits SMAD2/3, Mus musculus"
+xref: Reactome:REACT_32973 "Formation of the IGF:IGFBP-1 Complex, Canis familiaris"
+xref: Reactome:REACT_33135 "An anchoring protein, SARA, recruits SMAD2/3, Rattus norvegicus"
+xref: Reactome:REACT_34719 "Formation of the IGF:IGFBP-1 Complex, Danio rerio"
+xref: Reactome:REACT_6923 "An anchoring protein, SARA, recruits SMAD2/3, Homo sapiens"
+xref: Reactome:REACT_6945 "Type II receptor recruits type I receptor, Homo sapiens"
+xref: Reactome:REACT_78382 "Formation of the IGF:IGFBP-1 Complex, Mus musculus"
+xref: Reactome:REACT_78466 "Formation of the IGF:IGFBP-6 Complex, Canis familiaris"
+xref: Reactome:REACT_79634 "Formation of the IGF:IGFBP-5:ALS Complex, Canis familiaris"
+xref: Reactome:REACT_80470 "Formation of the IGF:IGFBP-1 Complex, Rattus norvegicus"
+xref: Reactome:REACT_80778 "Type II receptor recruits type I receptor, Mus musculus"
+xref: Reactome:REACT_83147 "Type II receptor recruits type I receptor, Rattus norvegicus"
+xref: Reactome:REACT_83165 "Formation of the IGF:IGFBP-5:ALS Complex, Sus scrofa"
+xref: Reactome:REACT_83532 "Formation of the IGF:IGFBP-2 Complex, Xenopus tropicalis"
+xref: Reactome:REACT_85250 "Formation of the IGF:IGFBP-2 Complex, Canis familiaris"
+xref: Reactome:REACT_85858 "Formation of the IGF:IGFBP-2 Complex, Gallus gallus"
+xref: Reactome:REACT_85975 "An anchoring protein, SARA, recruits SMAD2/3, Danio rerio"
+xref: Reactome:REACT_87187 "An anchoring protein, SARA, recruits SMAD2/3, Xenopus tropicalis"
+xref: Reactome:REACT_87374 "Formation of the IGF:IGFBP-6 Complex, Sus scrofa"
+xref: Reactome:REACT_87652 "Formation of the IGF:IGFBP-5:ALS Complex, Bos taurus"
+xref: Reactome:REACT_88068 "Formation of the IGF:IGFBP-3:ALS Complex, Canis familiaris"
+xref: Reactome:REACT_88138 "Formation of the IGF:IGFBP-5:ALS Complex, Danio rerio"
+xref: Reactome:REACT_88223 "Formation of the IGF:IGFBP-1 Complex, Sus scrofa"
+xref: Reactome:REACT_89261 "Formation of the IGF:IGFBP-4 Complex, Taeniopygia guttata"
+xref: Reactome:REACT_90027 "Formation of the IGF:IGFBP-2 Complex, Rattus norvegicus"
+xref: Reactome:REACT_90105 "Formation of the IGF:IGFBP-1 Complex, Xenopus tropicalis"
+xref: Reactome:REACT_90666 "An anchoring protein, SARA, recruits SMAD2/3, Sus scrofa"
+xref: Reactome:REACT_91560 "Type II receptor recruits type I receptor, Canis familiaris"
+xref: Reactome:REACT_92029 "Formation of the IGF:IGFBP-4 Complex, Rattus norvegicus"
+xref: Reactome:REACT_93175 "Formation of the IGF:IGFBP-1 Complex, Gallus gallus"
+xref: Reactome:REACT_93938 "Formation of the IGF:IGFBP-5:ALS Complex, Rattus norvegicus"
+xref: Reactome:REACT_94522 "Formation of the IGF:IGFBP-5:ALS Complex, Taeniopygia guttata"
+xref: Reactome:REACT_94808 "Formation of the IGF:IGFBP-6 Complex, Mus musculus"
+xref: Reactome:REACT_95241 "Formation of the IGF:IGFBP-3:ALS Complex, Mus musculus"
+xref: Reactome:REACT_95561 "Formation of the IGF:IGFBP-5:ALS Complex, Xenopus tropicalis"
+xref: Reactome:REACT_95647 "Formation of the IGF:IGFBP-3:ALS Complex, Bos taurus"
+xref: Reactome:REACT_96236 "Formation of the IGF:IGFBP-2 Complex, Mus musculus"
+xref: Reactome:REACT_96264 "Formation of the IGF:IGFBP-2 Complex, Danio rerio"
+xref: Reactome:REACT_98028 "Formation of the IGF:IGFBP-1 Complex, Taeniopygia guttata"
+xref: Reactome:REACT_98807 "An anchoring protein, SARA, recruits SMAD2/3, Bos taurus"
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0005575
+name: cellular_component
+namespace: cellular_component
+alt_id: GO:0008372
+def: "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators, NIF_Subcellular:sao-1337158144]
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "cell or subcellular entity" EXACT []
+synonym: "cellular component" EXACT []
+synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
+xref: NIF_Subcellular:sao-1337158144
+xref: NIF_Subcellular:sao1337158144
+
+[Term]
+id: GO:0005576
+name: extracellular region
+namespace: cellular_component
+def: "The space external to the outermost structure of a cell. For cells without external protective or external encapsulating structures this refers to space outside of the plasma membrane. This term covers the host cell environment outside an intracellular parasite." [GOC:go_curators]
+comment: Note that this term is intended to annotate gene products that are not attached to the cell surface. For gene products from multicellular organisms which are secreted from a cell but retained within the organism (i.e. released into the interstitial fluid or blood), consider the cellular component term 'extracellular space ; GO:0005615'.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "extracellular" EXACT []
+xref: Wikipedia:Extracellular
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005618
+name: cell wall
+namespace: cellular_component
+def: "The rigid or semi-rigid envelope lying outside the cell membrane of plant, fungal, most prokaryotic cells and some protozoan parasites, maintaining their shape and protecting them from osmotic lysis. In plants it is made of cellulose and, often, lignin; in fungi it is composed largely of polysaccharides; in bacteria it is composed of peptidoglycan; in protozoan parasites such as Giardia species, it's made of carbohydrates and proteins." [GOC:giardia, http://en.wikipedia.org/wiki/Microbial_cyst, ISBN:0198547684, PMID:15134259]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Wikipedia:Cell_wall
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005624
+name: obsolete membrane fraction
+namespace: cellular_component
+def: "OBSOLETE: That fraction of cells, prepared by disruptive biochemical methods, that includes the plasma and other membranes." [GOC:ma]
+comment: This term was made obsolete because it refers to a cell fractionation experimental result and not a bona fide cellular component.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "membrane fraction" EXACT []
+is_obsolete: true
+consider: GO:0016020
+
+[Term]
+id: GO:0005634
+name: nucleus
+namespace: cellular_component
+def: "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent." [GOC:go_curators]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "cell nucleus" EXACT []
+xref: NIF_Subcellular:sao1702920020
+xref: Wikipedia:Cell_nucleus
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005694
+name: chromosome
+namespace: cellular_component
+def: "A structure composed of a very long molecule of DNA and associated proteins (e.g. histones) that carries hereditary information." [ISBN:0198547684]
+comment: Chromosomes include parts that are not part of the chromatin.  Examples include the kinetochore.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "chromatid" RELATED []
+synonym: "interphase chromosome" NARROW []
+synonym: "prophase chromosome" NARROW []
+xref: Wikipedia:Chromosome
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005730
+name: nucleolus
+namespace: cellular_component
+def: "A small, dense body one or more of which are present in the nucleus of eukaryotic cells. It is rich in RNA and protein, is not bounded by a limiting membrane, and is not seen during mitosis. Its prime function is the transcription of the nucleolar DNA into 45S ribosomal-precursor RNA, the processing of this RNA into 5.8S, 18S, and 28S components of ribosomal RNA, and the association of these components with 5S RNA and proteins synthesized outside the nucleolus. This association results in the formation of ribonucleoprotein precursors; these pass into the cytoplasm and mature into the 40S and 60S subunits of the ribosome." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+xref: NIF_Subcellular:sao1820400233
+xref: Wikipedia:Nucleolus
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005634 ! nucleus
+
+[Term]
+id: GO:0005737
+name: cytoplasm
+namespace: cellular_component
+def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Wikipedia:Cytoplasm
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005739
+name: mitochondrion
+namespace: cellular_component
+def: "A semiautonomous, self replicating organelle that occurs in varying numbers, shapes, and sizes in the cytoplasm of virtually all eukaryotic cells. It is notably the site of tissue respiration." [GOC:giardia, ISBN:0198506732]
+comment: Some anaerobic or microaerophilic organisms (e.g. Entamoeba histolytica, Giardia intestinalis and several Microsporidia species) do not have mitochondria, and contain mitochondrion-related organelles (MROs) instead, called mitosomes or hydrogenosomes, very likely derived from mitochondria. To annotate gene products located in these mitochondrial relics in species such as Entamoeba histolytica, Giardia intestinalis or others, please use GO:0032047 'mitosome' or GO:0042566 'hydrogenosome'. (See PMID:24316280 for a list of species currently known to contain mitochondrion-related organelles.)
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "mitochondria" EXACT []
+xref: NIF_Subcellular:sao1860313010
+xref: Wikipedia:Mitochondrion
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0005740
+name: mitochondrial envelope
+namespace: cellular_component
+def: "The double lipid bilayer enclosing the mitochondrion and separating its contents from the cell cytoplasm; includes the intermembrane space." [GOC:ai, GOC:pz]
+subset: goslim_candida
+subset: goslim_yeast
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005739 ! mitochondrion
+
+[Term]
+id: GO:0005773
+name: vacuole
+namespace: cellular_component
+def: "A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material. Cells contain one or several vacuoles, that may have different functions from each other. Vacuoles have a diverse array of functions. They can act as a storage organelle for nutrients or waste products, as a degradative compartment, as a cost-effective way of increasing cell size, and as a homeostatic regulator controlling both turgor pressure and pH of the cytosol." [GOC:mtg_sensu, ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "vacuolar carboxypeptidase Y" RELATED []
+xref: Wikipedia:Vacuole
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0005777
+name: peroxisome
+namespace: cellular_component
+alt_id: GO:0019818
+def: "A small organelle enclosed by a single membrane, and found in most eukaryotic cells. Contains peroxidases and other enzymes involved in a variety of metabolic processes including free radical detoxification, lipid catabolism and biosynthesis, and hydrogen peroxide metabolism." [GOC:pm, PMID:9302272, UniProtKB-KW:KW-0576]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "peroxisomal" RELATED [GOC:curators]
+synonym: "peroxisome vesicle" BROAD []
+xref: NIF_Subcellular:sao499555322
+xref: Wikipedia:Peroxisome
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0005783
+name: endoplasmic reticulum
+namespace: cellular_component
+def: "The irregular network of unit membranes, visible only by electron microscopy, that occurs in the cytoplasm of many eukaryotic cells. The membranes form a complex meshwork of tubular channels, which are often expanded into slitlike cavities called cisternae. The ER takes two forms, rough (or granular), with ribosomes adhering to the outer surface, and smooth (with no ribosomes attached)." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "ER" EXACT []
+xref: NIF_Subcellular:sao1036339110
+xref: Wikipedia:Endoplasmic_reticulum
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0012505 ! endomembrane system
+
+[Term]
+id: GO:0005794
+name: Golgi apparatus
+namespace: cellular_component
+def: "A compound membranous cytoplasmic organelle of eukaryotic cells, consisting of flattened, ribosome-free vesicles arranged in a more or less regular stack. The Golgi apparatus differs from the endoplasmic reticulum in often having slightly thicker membranes, appearing in sections as a characteristic shallow semicircle so that the convex side (cis or entry face) abuts the endoplasmic reticulum, secretory vesicles emerging from the concave side (trans or exit face). In vertebrate cells there is usually one such organelle, while in invertebrates and plants, where they are known usually as dictyosomes, there may be several scattered in the cytoplasm. The Golgi apparatus processes proteins produced on the ribosomes of the rough endoplasmic reticulum; such processing includes modification of the core oligosaccharides of glycoproteins, and the sorting and packaging of proteins for transport to a variety of cellular locations. Three different regions of the Golgi are now recognized both in terms of structure and function: cis, in the vicinity of the cis face, trans, in the vicinity of the trans face, and medial, lying between the cis and trans regions." [ISBN:0198506732]
+comment: Note that the Golgi apparatus can be located in various places in the cytoplasm. In plants and lower animal cells, the Golgi apparatus exists as many copies of discrete stacks dispersed throughout the cytoplasm, while the Golgi apparatus of interphase mammalian cells is a juxtanuclear, often pericentriolar reticulum, where the discrete Golgi stacks are stitched together to form a compact and interconnected ribbon, sometimes called the Golgi ribbon.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "Golgi" BROAD []
+synonym: "Golgi complex" EXACT []
+synonym: "Golgi ribbon" NARROW []
+xref: NIF_Subcellular:sao451912436
+xref: Wikipedia:Golgi_apparatus
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0012505 ! endomembrane system
+
+[Term]
+id: GO:0005815
+name: microtubule organizing center
+namespace: cellular_component
+def: "An intracellular structure that can catalyze gamma-tubulin-dependent microtubule nucleation and that can anchor microtubules by interacting with their minus ends, plus ends or sides." [GOC:vw, http://en.wikipedia.org/wiki/Microtubule_organizing_center, ISBN:0815316194, PMID:17072892, PMID:17245416]
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_yeast
+synonym: "microtubule organising centre" EXACT []
+synonym: "MTOC" EXACT []
+xref: Wikipedia:Microtubule_organizing_center
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005856 ! cytoskeleton
+
+[Term]
+id: GO:0005840
+name: ribosome
+namespace: cellular_component
+alt_id: GO:0033279
+def: "An intracellular organelle, about 200 A in diameter, consisting of RNA and protein. It is the site of protein biosynthesis resulting from translation of messenger RNA (mRNA). It consists of two subunits, one large and one small, each containing only protein and RNA. Both the ribosome and its subunits are characterized by their sedimentation coefficients, expressed in Svedberg units (symbol: S). Hence, the prokaryotic ribosome (70S) comprises a large (50S) subunit and a small (30S) subunit, while the eukaryotic ribosome (80S) comprises a large (60S) subunit and a small (40S) subunit. Two sites on the ribosomal large subunit are involved in translation, namely the aminoacyl site (A site) and peptidyl site (P site). Ribosomes from prokaryotes, eukaryotes, mitochondria, and chloroplasts have characteristically distinct ribosomal proteins." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "free ribosome" NARROW [NIF_Subcellular:sao1139385046]
+synonym: "membrane bound ribosome" NARROW [NIF_Subcellular:sao1291545653]
+synonym: "ribosomal RNA" RELATED []
+xref: NIF_Subcellular:sao1429207766
+xref: Wikipedia:Ribosome
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0005856
+name: cytoskeleton
+namespace: cellular_component
+def: "Any of the various filamentous elements that form the internal framework of cells, and typically remain after treatment of the cells with mild detergent to remove membrane constituents and soluble components of the cytoplasm. The term embraces intermediate filaments, microfilaments, microtubules, the microtrabecular lattice, and other structures characterized by a polymeric filamentous nature and long-range order within the cell. The various elements of the cytoskeleton not only serve in the maintenance of cellular shape but also have roles in other cellular functions, including cellular movement, cell division, endocytosis, and movement of organelles." [GOC:mah, ISBN:0198547684, PMID:16959967]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Wikipedia:Cytoskeleton
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005886
+name: plasma membrane
+namespace: cellular_component
+alt_id: GO:0005904
+def: "The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [ISBN:0716731363]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "bacterial inner membrane" NARROW []
+synonym: "cell membrane" EXACT []
+synonym: "cellular membrane" EXACT [NIF_Subcellular:sao6433132645]
+synonym: "cytoplasmic membrane" EXACT []
+synonym: "inner endospore membrane" NARROW []
+synonym: "juxtamembrane" BROAD []
+synonym: "plasma membrane lipid bilayer" NARROW [GOC:mah]
+synonym: "plasmalemma" EXACT []
+xref: NIF_Subcellular:sao1663586795
+xref: Wikipedia:Cell_membrane
+is_a: GO:0016020 ! membrane
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005933
+name: cellular bud
+namespace: cellular_component
+def: "A protuberance from a cell of an organism that reproduces by budding, which will grow larger and become a separate daughter cell after nuclear division, cytokinesis, and cell wall formation (when appropriate). The daughter cell may completely separate from the mother cell, or the mother and daughter cells may remain associated." [GOC:sgd_curators]
+subset: goslim_candida
+subset: goslim_pir
+subset: goslim_yeast
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005938
+name: cell cortex
+namespace: cellular_component
+def: "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins." [GOC:mah, ISBN:0815316194]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+synonym: "cell periphery" RELATED []
+synonym: "peripheral cytoplasm" RELATED []
+xref: Wikipedia:Cell_cortex
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0005975
+name: carbohydrate metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving carbohydrates, any of a group of organic compounds based of the general formula Cx(H2O)y. Includes the formation of carbohydrate derivatives by the addition of a carbohydrate residue to another molecule." [GOC:mah, ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "carbohydrate metabolism" EXACT []
+xref: Reactome:REACT_102834 "Metabolism of carbohydrates, Mus musculus"
+xref: Reactome:REACT_103806 "Metabolism of carbohydrates, Mycobacterium tuberculosis"
+xref: Reactome:REACT_104502 "Metabolism of carbohydrates, Gallus gallus"
+xref: Reactome:REACT_105321 "Metabolism of carbohydrates, Escherichia coli"
+xref: Reactome:REACT_106046 "Metabolism of carbohydrates, Drosophila melanogaster"
+xref: Reactome:REACT_107409 "Metabolism of carbohydrates, Caenorhabditis elegans"
+xref: Reactome:REACT_115733 "Carbohydrate metabolism, Gallus gallus"
+xref: Reactome:REACT_28218 "Metabolism of carbohydrates, Xenopus tropicalis"
+xref: Reactome:REACT_32291 "Metabolism of carbohydrates, Staphylococcus aureus N315"
+xref: Reactome:REACT_33141 "Metabolism of carbohydrates, Taeniopygia guttata"
+xref: Reactome:REACT_33953 "Metabolism of carbohydrates, Rattus norvegicus"
+xref: Reactome:REACT_34800 "Metabolism of carbohydrates, Danio rerio"
+xref: Reactome:REACT_474 "Metabolism of carbohydrates, Homo sapiens"
+xref: Reactome:REACT_77669 "Metabolism of carbohydrates, Plasmodium falciparum"
+xref: Reactome:REACT_81945 "Metabolism of carbohydrates, Schizosaccharomyces pombe"
+xref: Reactome:REACT_83038 "Metabolism of carbohydrates, Arabidopsis thaliana"
+xref: Reactome:REACT_83329 "Metabolism of carbohydrates, Saccharomyces cerevisiae"
+xref: Reactome:REACT_88330 "Metabolism of carbohydrates, Bos taurus"
+xref: Reactome:REACT_88558 "Metabolism of carbohydrates, Canis familiaris"
+xref: Reactome:REACT_90099 "Metabolism of carbohydrates, Sus scrofa"
+xref: Reactome:REACT_96375 "Metabolism of carbohydrates, Dictyostelium discoideum"
+xref: Reactome:REACT_98394 "Metabolism of carbohydrates, Oryza sativa"
+xref: Wikipedia:Carbohydrate_metabolism
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006091
+name: generation of precursor metabolites and energy
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the formation of precursor metabolites, substances from which energy is derived, and any process involved in the liberation of energy from these substances." [GOC:jl]
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "energy pathways" BROAD []
+synonym: "intermediary metabolism" RELATED [GOC:mah]
+synonym: "metabolic energy generation" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006259
+name: DNA metabolic process
+namespace: biological_process
+alt_id: GO:0055132
+def: "Any cellular metabolic process involving deoxyribonucleic acid. This is one of the two main types of nucleic acid, consisting of a long, unbranched macromolecule formed from one, or more commonly, two, strands of linked deoxyribonucleotides." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "cellular DNA metabolism" EXACT []
+synonym: "DNA metabolism" EXACT []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006412
+name: translation
+namespace: biological_process
+alt_id: GO:0006416
+alt_id: GO:0006453
+alt_id: GO:0043037
+def: "The cellular metabolic process in which a protein is formed, using the sequence of a mature mRNA molecule to specify the sequence of amino acids in a polypeptide chain. Translation is mediated by the ribosome, and begins with the formation of a ternary complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2, which subsequently associates with the small subunit of the ribosome and an mRNA. Translation ends with the release of a polypeptide chain from the ribosome." [GOC:go_curators]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "protein anabolism" EXACT []
+synonym: "protein biosynthesis" EXACT []
+synonym: "protein biosynthetic process" EXACT [GOC:curators]
+synonym: "protein formation" EXACT []
+synonym: "protein synthesis" EXACT []
+synonym: "protein translation" EXACT []
+xref: Reactome:REACT_100338 "Translation, Sus scrofa"
+xref: Reactome:REACT_100851 "Translation, Saccharomyces cerevisiae"
+xref: Reactome:REACT_101045 "Translation, Dictyostelium discoideum"
+xref: Reactome:REACT_101324 "Translation, Canis familiaris"
+xref: Reactome:REACT_1014 "Translation, Homo sapiens"
+xref: Reactome:REACT_103420 "Translation, Plasmodium falciparum"
+xref: Reactome:REACT_105544 "Translation, Arabidopsis thaliana"
+xref: Reactome:REACT_29980 "Translation, Bos taurus"
+xref: Reactome:REACT_33559 "Translation, Rattus norvegicus"
+xref: Reactome:REACT_77710 "Translation, Drosophila melanogaster"
+xref: Reactome:REACT_79784 "Translation, Danio rerio"
+xref: Reactome:REACT_81734 "Translation, Schizosaccharomyces pombe"
+xref: Reactome:REACT_81833 "Translation, Caenorhabditis elegans"
+xref: Reactome:REACT_82171 "Translation, Xenopus tropicalis"
+xref: Reactome:REACT_83429 "Translation, Taeniopygia guttata"
+xref: Reactome:REACT_83530 "Translation, Gallus gallus"
+xref: Reactome:REACT_86996 "Translation, Oryza sativa"
+xref: Reactome:REACT_95535 "Translation, Mus musculus"
+xref: Reactome:REACT_96394 "Translation, Escherichia coli"
+xref: Wikipedia:Translation_(genetics)
+is_a: GO:0008150 ! biological_process
+relationship: has_part GO:0008150 ! biological_process
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006457
+name: protein folding
+namespace: biological_process
+alt_id: GO:0007022
+alt_id: GO:0007024
+alt_id: GO:0007025
+def: "The process of assisting in the covalent and noncovalent assembly of single chain polypeptides or multisubunit complexes into the correct tertiary structure." [GOC:go_curators, GOC:rb]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "alpha-tubulin folding" NARROW [GOC:mah]
+synonym: "beta-tubulin folding" NARROW [GOC:mah]
+synonym: "chaperone activity" RELATED []
+synonym: "chaperonin ATPase activity" RELATED []
+synonym: "chaperonin-mediated tubulin folding" NARROW [GOC:mah]
+synonym: "co-chaperone activity" RELATED []
+synonym: "co-chaperonin activity" RELATED []
+synonym: "glycoprotein-specific chaperone activity" RELATED []
+synonym: "non-chaperonin molecular chaperone ATPase activity" RELATED []
+synonym: "protein complex assembly, multichaperone pathway" RELATED []
+xref: Reactome:REACT_100411 "Chaperonin-mediated protein folding, Arabidopsis thaliana"
+xref: Reactome:REACT_104912 "Chaperonin-mediated protein folding, Caenorhabditis elegans"
+xref: Reactome:REACT_105663 "Chaperonin-mediated protein folding, Rattus norvegicus"
+xref: Reactome:REACT_106009 "Chaperonin-mediated protein folding, Canis familiaris"
+xref: Reactome:REACT_106427 "Chaperonin-mediated protein folding, Mus musculus"
+xref: Reactome:REACT_106894 "Formation of tubulin folding intermediates by CCT/TriC, Canis familiaris"
+xref: Reactome:REACT_106927 "Chaperonin-mediated protein folding, Drosophila melanogaster"
+xref: Reactome:REACT_107029 "Formation of tubulin folding intermediates by CCT/TriC, Drosophila melanogaster"
+xref: Reactome:REACT_108248 "Chaperonin-mediated protein folding, Gallus gallus"
+xref: Reactome:REACT_109411 "Formation of tubulin folding intermediates by CCT/TriC, Bos taurus"
+xref: Reactome:REACT_110417 "Formation of tubulin folding intermediates by CCT/TriC, Rattus norvegicus"
+xref: Reactome:REACT_16956 "Formation of tubulin folding intermediates by CCT/TriC, Homo sapiens"
+xref: Reactome:REACT_17001 "Formation of tubulin folding intermediates by CCT/TriC, Mus musculus"
+xref: Reactome:REACT_17004 "Chaperonin-mediated protein folding, Homo sapiens"
+xref: Reactome:REACT_17056 "Cooperation of Prefoldin and TriC/CCT in actin and tubulin folding, Bos taurus"
+xref: Reactome:REACT_23878 "N-glycan trimming in the ER and Calnexin/Calreticulin cycle, Homo sapiens"
+xref: Reactome:REACT_30906 "Chaperonin-mediated protein folding, Oryza sativa"
+xref: Reactome:REACT_32155 "Chaperonin-mediated protein folding, Saccharomyces cerevisiae"
+xref: Reactome:REACT_32255 "Chaperonin-mediated protein folding, Schizosaccharomyces pombe"
+xref: Reactome:REACT_33395 "Formation of tubulin folding intermediates by CCT/TriC, Mus musculus"
+xref: Reactome:REACT_77627 "Chaperonin-mediated protein folding, Plasmodium falciparum"
+xref: Reactome:REACT_77963 "Formation of tubulin folding intermediates by CCT/TriC, Saccharomyces cerevisiae"
+xref: Reactome:REACT_78530 "Formation of tubulin folding intermediates by CCT/TriC, Gallus gallus"
+xref: Reactome:REACT_81155 "Formation of tubulin folding intermediates by CCT/TriC, Caenorhabditis elegans"
+xref: Reactome:REACT_83906 "Chaperonin-mediated protein folding, Dictyostelium discoideum"
+xref: Reactome:REACT_85492 "Formation of tubulin folding intermediates by CCT/TriC, Sus scrofa"
+xref: Reactome:REACT_85496 "Formation of tubulin folding intermediates by CCT/TriC, Plasmodium falciparum"
+xref: Reactome:REACT_86318 "Formation of tubulin folding intermediates by CCT/TriC, Arabidopsis thaliana"
+xref: Reactome:REACT_91676 "Formation of tubulin folding intermediates by CCT/TriC, Schizosaccharomyces pombe"
+xref: Reactome:REACT_92785 "Formation of tubulin folding intermediates by CCT/TriC, Dictyostelium discoideum"
+xref: Reactome:REACT_92961 "Chaperonin-mediated protein folding, Xenopus tropicalis"
+xref: Reactome:REACT_92981 "Chaperonin-mediated protein folding, Taeniopygia guttata"
+xref: Reactome:REACT_94123 "Formation of tubulin folding intermediates by CCT/TriC, Taeniopygia guttata"
+xref: Reactome:REACT_94443 "Formation of tubulin folding intermediates by CCT/TriC, Danio rerio"
+xref: Reactome:REACT_94772 "Chaperonin-mediated protein folding, Sus scrofa"
+xref: Reactome:REACT_96773 "Chaperonin-mediated protein folding, Danio rerio"
+xref: Reactome:REACT_97016 "Chaperonin-mediated protein folding, Bos taurus"
+xref: Reactome:REACT_97220 "Formation of tubulin folding intermediates by CCT/TriC, Xenopus tropicalis"
+xref: Reactome:REACT_98132 "Formation of tubulin folding intermediates by CCT/TriC, Oryza sativa"
+xref: Wikipedia:Protein_folding
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006464
+name: cellular protein modification process
+namespace: biological_process
+def: "The covalent alteration of one or more amino acids occurring in proteins, peptides and nascent polypeptides (co-translational, post-translational modifications) occurring at the level of an individual cell. Includes the modification of charged tRNAs that are destined to occur in a protein (pre-translation modification)." [GOC:go_curators]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "process resulting in protein modification" RELATED []
+synonym: "protein modification process" BROAD [GOC:bf, GOC:jl]
+synonym: "protein tagging activity" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006629
+name: lipid metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving lipids, compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent. Includes fatty acids; neutral fats, other fatty-acid esters, and soaps; long-chain (fatty) alcohols and waxes; sphingoids and other long-chain bases; glycolipids, phospholipids and sphingolipids; and carotenes, polyprenols, sterols, terpenes and other isoprenoids." [GOC:ma]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "lipid metabolism" EXACT []
+xref: Reactome:REACT_104930 "Lipid digestion, mobilization, and transport, Drosophila melanogaster"
+xref: Reactome:REACT_107479 "Lipid digestion, mobilization, and transport, Xenopus tropicalis"
+xref: Reactome:REACT_108775 "Lipid digestion, mobilization, and transport, Canis familiaris"
+xref: Reactome:REACT_114669 "Lipid digestion, mobilization, and transport, Staphylococcus aureus N315"
+xref: Reactome:REACT_115652 "Lipid metabolism, Gallus gallus"
+xref: Reactome:REACT_28745 "Lipid digestion, mobilization, and transport, Saccharomyces cerevisiae"
+xref: Reactome:REACT_31395 "Lipid digestion, mobilization, and transport, Sus scrofa"
+xref: Reactome:REACT_32539 "Lipid digestion, mobilization, and transport, Bos taurus"
+xref: Reactome:REACT_33836 "Lipid digestion, mobilization, and transport, Rattus norvegicus"
+xref: Reactome:REACT_602 "Lipid digestion, mobilization, and transport, Homo sapiens"
+xref: Reactome:REACT_77176 "Lipid digestion, mobilization, and transport, Danio rerio"
+xref: Reactome:REACT_77191 "Lipid digestion, mobilization, and transport, Arabidopsis thaliana"
+xref: Reactome:REACT_79244 "Lipid digestion, mobilization, and transport, Plasmodium falciparum"
+xref: Reactome:REACT_81778 "Lipid digestion, mobilization, and transport, Oryza sativa"
+xref: Reactome:REACT_82512 "Lipid digestion, mobilization, and transport, Taeniopygia guttata"
+xref: Reactome:REACT_82723 "Lipid digestion, mobilization, and transport, Escherichia coli"
+xref: Reactome:REACT_87884 "Lipid digestion, mobilization, and transport, Caenorhabditis elegans"
+xref: Reactome:REACT_90757 "Lipid digestion, mobilization, and transport, Mus musculus"
+xref: Reactome:REACT_94607 "Lipid digestion, mobilization, and transport, Mycobacterium tuberculosis"
+xref: Reactome:REACT_97906 "Lipid digestion, mobilization, and transport, Gallus gallus"
+xref: Reactome:REACT_98129 "Lipid digestion, mobilization, and transport, Schizosaccharomyces pombe"
+xref: Reactome:REACT_99706 "Lipid digestion, mobilization, and transport, Dictyostelium discoideum"
+xref: Wikipedia:Lipid_metabolism
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006766
+name: vitamin metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving vitamins. Vitamin is a general term for a number of unrelated organic substances that occur in many foods in small amounts and that are necessary in trace amounts for the normal metabolic functioning of the body. Vitamins may be water-soluble or fat-soluble and usually serve as components of coenzyme systems." [GOC:ai]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_pir
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "vitamin metabolism" EXACT []
+xref: Reactome:REACT_101808 "Metabolism of vitamins and cofactors, Bos taurus"
+xref: Reactome:REACT_101968 "Metabolism of vitamins and cofactors, Saccharomyces cerevisiae"
+xref: Reactome:REACT_102472 "Vitamins, Xenopus tropicalis"
+xref: Reactome:REACT_103646 "Metabolism of vitamins and cofactors, Staphylococcus aureus N315"
+xref: Reactome:REACT_104403 "Vitamins, Bos taurus"
+xref: Reactome:REACT_105907 "Metabolism of vitamins and cofactors, Danio rerio"
+xref: Reactome:REACT_106152 "Metabolism of vitamins and cofactors, Xenopus tropicalis"
+xref: Reactome:REACT_108558 "Metabolism of vitamins and cofactors, Rattus norvegicus"
+xref: Reactome:REACT_110948 "Metabolism of vitamins and cofactors, Sus scrofa"
+xref: Reactome:REACT_11193 "Metabolism of vitamins and cofactors, Homo sapiens"
+xref: Reactome:REACT_13450 "Vitamins, Homo sapiens"
+xref: Reactome:REACT_30091 "Metabolism of vitamins and cofactors, Oryza sativa"
+xref: Reactome:REACT_31562 "Vitamins, Sus scrofa"
+xref: Reactome:REACT_33241 "Vitamins, Oryza sativa"
+xref: Reactome:REACT_33738 "Metabolism of vitamins and cofactors, Mycobacterium tuberculosis"
+xref: Reactome:REACT_34161 "Metabolism of vitamins and cofactors, Mus musculus"
+xref: Reactome:REACT_34372 "Vitamins, Taeniopygia guttata"
+xref: Reactome:REACT_36524 "Vitamins, Gallus gallus"
+xref: Reactome:REACT_78899 "Metabolism of vitamins and cofactors, Caenorhabditis elegans"
+xref: Reactome:REACT_79004 "Vitamins, Danio rerio"
+xref: Reactome:REACT_80415 "Vitamins, Rattus norvegicus"
+xref: Reactome:REACT_81509 "Metabolism of vitamins and cofactors, Gallus gallus"
+xref: Reactome:REACT_82129 "Metabolism of vitamins and cofactors, Taeniopygia guttata"
+xref: Reactome:REACT_82903 "Vitamins, Canis familiaris"
+xref: Reactome:REACT_83508 "Metabolism of vitamins and cofactors, Arabidopsis thaliana"
+xref: Reactome:REACT_84128 "Vitamins, Drosophila melanogaster"
+xref: Reactome:REACT_87513 "Metabolism of vitamins and cofactors, Schizosaccharomyces pombe"
+xref: Reactome:REACT_88847 "Vitamins, Mus musculus"
+xref: Reactome:REACT_88850 "Metabolism of vitamins and cofactors, Dictyostelium discoideum"
+xref: Reactome:REACT_90099 "Vitamins, Arabidopsis thaliana"
+xref: Reactome:REACT_96278 "Metabolism of vitamins and cofactors, Plasmodium falciparum"
+xref: Reactome:REACT_96904 "Metabolism of vitamins and cofactors, Drosophila melanogaster"
+xref: Reactome:REACT_97734 "Metabolism of vitamins and cofactors, Escherichia coli"
+xref: Reactome:REACT_97893 "Metabolism of vitamins and cofactors, Canis familiaris"
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006810
+name: transport
+namespace: biological_process
+alt_id: GO:0015457
+alt_id: GO:0015460
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore." [GOC:dph, GOC:jl, GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "auxiliary transport protein activity" RELATED [GOC:mah]
+synonym: "small molecule transport" NARROW []
+synonym: "solute:solute exchange" NARROW []
+synonym: "transport accessory protein activity" RELATED [GOC:mah]
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006950
+name: response to stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "response to abiotic stress" RELATED []
+synonym: "response to biotic stress" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006996
+name: organelle organization
+namespace: biological_process
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of an organelle within a cell. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_pir
+subset: gosubset_prok
+synonym: "organelle organisation" EXACT [GOC:curators]
+synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0006997
+name: nucleus organization
+namespace: biological_process
+alt_id: GO:0048287
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of the nucleus." [GOC:dph, GOC:ems, GOC:jl, GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_pir
+subset: goslim_yeast
+synonym: "nuclear morphology" RELATED []
+synonym: "nuclear organisation" EXACT [GOC:curators]
+synonym: "nuclear organization" EXACT [GOC:curators]
+synonym: "nuclear organization and biogenesis" RELATED [GOC:mah]
+synonym: "nucleus organization and biogenesis" RELATED [GOC:mah]
+is_a: GO:0006996 ! organelle organization
+
+[Term]
+id: GO:0007010
+name: cytoskeleton organization
+namespace: biological_process
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of cytoskeletal structures." [GOC:dph, GOC:jl, GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "cytoskeletal organization and biogenesis" RELATED [GOC:mah]
+synonym: "cytoskeletal regulator activity" RELATED []
+synonym: "cytoskeleton organisation" EXACT [GOC:curators]
+synonym: "cytoskeleton organization and biogenesis" RELATED [GOC:mah]
+is_a: GO:0006996 ! organelle organization
+
+[Term]
+id: GO:0007049
+name: cell cycle
+namespace: biological_process
+def: "The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division." [GOC:go_curators, GOC:mtg_cell_cycle]
+subset: gocheck_do_not_manually_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "cell-division cycle" EXACT []
+xref: Wikipedia:Cell_cycle
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0007114
+name: cell budding
+namespace: biological_process
+def: "A form of asexual reproduction, occurring in certain bacteria and fungi (e.g. yeasts) and some primitive animals in which an individual arises from a daughter cell formed by pinching off a part of the parent cell. The budlike outgrowths so formed may sometimes remain attached to the parent cell." [ISBN:0198506732]
+subset: goslim_candida
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "budding" BROAD []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0007124
+name: pseudohyphal growth
+namespace: biological_process
+def: "A pattern of cell growth that occurs in conditions of nitrogen limitation and abundant fermentable carbon source. Cells become elongated, switch to a unipolar budding pattern, remain physically attached to each other, and invade the growth substrate." [GOC:krc, PMID:11104818]
+subset: goslim_candida
+subset: goslim_yeast
+is_a: GO:0070783 ! growth of unicellular organism as a thread of attached cells
+
+[Term]
+id: GO:0007155
+name: cell adhesion
+namespace: biological_process
+def: "The attachment of a cell, either to another cell or to an underlying substrate such as the extracellular matrix, via cell adhesion molecules." [GOC:hb, GOC:pf]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+subset: gosubset_prok
+synonym: "cell adhesion molecule activity" RELATED []
+xref: Wikipedia:Cell_adhesion
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0007165
+name: signal transduction
+namespace: biological_process
+alt_id: GO:0023033
+def: "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell." [GOC:go_curators, GOC:mtg_signaling_feb11]
+comment: Note that signal transduction is defined broadly to include a ligand interacting with a receptor, downstream signaling steps and a response being triggered. A change in form of the signal in every step is not necessary. Note that in many cases the end of this process is regulation of the initiation of transcription. Note that specific transcription factors may be annotated to this term, but core/general transcription machinery such as RNA polymerase should not.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "signaling cascade" NARROW []
+synonym: "signaling pathway" RELATED []
+synonym: "signalling cascade" NARROW []
+synonym: "signalling pathway" RELATED [GOC:mah]
+xref: Reactome:REACT_100624 "EGFR interacts with phospholipase C-gamma, Gallus gallus"
+xref: Reactome:REACT_102354 "EGFR interacts with phospholipase C-gamma, Canis familiaris"
+xref: Reactome:REACT_112130 "EGFR interacts with phospholipase C-gamma, Oryza sativa"
+xref: Reactome:REACT_112549 "EGFR interacts with phospholipase C-gamma, Arabidopsis thaliana"
+xref: Reactome:REACT_113151 "EGFR interacts with phospholipase C-gamma, Mycobacterium tuberculosis"
+xref: Reactome:REACT_113601 "EGFR interacts with phospholipase C-gamma, Drosophila melanogaster"
+xref: Reactome:REACT_113964 "EGFR interacts with phospholipase C-gamma, Bos taurus"
+xref: Reactome:REACT_114657 "EGFR interacts with phospholipase C-gamma, Dictyostelium discoideum"
+xref: Reactome:REACT_114690 "EGFR interacts with phospholipase C-gamma, Saccharomyces cerevisiae"
+xref: Reactome:REACT_114820 "EGFR interacts with phospholipase C-gamma, Sus scrofa"
+xref: Reactome:REACT_114910 "EGFR interacts with phospholipase C-gamma, Caenorhabditis elegans"
+xref: Reactome:REACT_115037 "EGFR interacts with phospholipase C-gamma, Plasmodium falciparum"
+xref: Reactome:REACT_115147 "EGFR interacts with phospholipase C-gamma, Schizosaccharomyces pombe"
+xref: Reactome:REACT_12478 "EGFR interacts with phospholipase C-gamma, Homo sapiens"
+xref: Reactome:REACT_31232 "EGFR interacts with phospholipase C-gamma, Rattus norvegicus"
+xref: Reactome:REACT_78535 "EGFR interacts with phospholipase C-gamma, Xenopus tropicalis"
+xref: Reactome:REACT_89740 "EGFR interacts with phospholipase C-gamma, Taeniopygia guttata"
+xref: Reactome:REACT_93680 "EGFR interacts with phospholipase C-gamma, Danio rerio"
+xref: Reactome:REACT_98872 "EGFR interacts with phospholipase C-gamma, Mus musculus"
+xref: Wikipedia:Signal_transduction
+is_a: GO:0050789 ! regulation of biological process
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0008150
+name: biological_process
+namespace: biological_process
+alt_id: GO:0000004
+alt_id: GO:0007582
+def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." [GOC:go_curators, GOC:isa_complete]
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. Note that when this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+xref: Wikipedia:Biological_process
+
+[Term]
+id: GO:0008233
+name: peptidase activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid." [GOC:jl, ISBN:0815332181]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "hydrolase, acting on peptide bonds" EXACT []
+synonym: "peptide hydrolase activity" EXACT []
+synonym: "protease activity" EXACT []
+synonym: "proteinase activity" EXACT []
+xref: EC:3.4
+xref: Reactome:REACT_106748 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6, Rattus norvegicus"
+xref: Reactome:REACT_110349 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6, Mus musculus"
+xref: Reactome:REACT_13710 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6, Homo sapiens"
+xref: Reactome:REACT_19284 "Proteolytic processing of Slit, Homo sapiens"
+xref: Reactome:REACT_93020 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6, Bos taurus"
+xref: Reactome:REACT_99630 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6, Gallus gallus"
+is_a: GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0008289
+name: lipid binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a lipid." [GOC:ai]
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0009405
+name: pathogenesis
+namespace: biological_process
+def: "The set of specific processes that generate the ability of an organism to cause disease in another." [GOC:go_curators]
+comment: Note that this term should not be used to annotate gene products that are involved in the host response to pathogenesis. It should only be used to annotate those gene products involved in the generation of pathogenesis by the pathogen itself.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: gosubset_prok
+synonym: "channel-forming toxin activity" RELATED []
+synonym: "cytotoxin activity" RELATED []
+synonym: "endotoxin activity" RELATED []
+synonym: "enterotoxin activity" RELATED []
+synonym: "exotoxin activity" RELATED []
+synonym: "lipoprotein toxin" RELATED []
+synonym: "neurotoxin activity" RELATED []
+synonym: "pore-forming toxin activity" RELATED []
+synonym: "toxin activity" RELATED []
+synonym: "virulence" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0012505
+name: endomembrane system
+namespace: cellular_component
+def: "A collection of membranous structures involved in transport within the cell. The main components of the endomembrane system are endoplasmic reticulum, Golgi bodies, vesicles, cell membrane and nuclear envelope. Members of the endomembrane system pass materials through each other or though the use of vesicles." [GOC:lh]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+xref: Wikipedia:Endomembrane_system
+is_a: GO:0005575 ! cellular_component
+relationship: has_part GO:0005773 ! vacuole
+relationship: has_part GO:0005886 ! plasma membrane
+
+[Term]
+id: GO:0016020
+name: membrane
+namespace: cellular_component
+def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Wikipedia:Biological_membrane
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0016023
+name: cytoplasmic membrane-bounded vesicle
+namespace: cellular_component
+def: "A membrane-bounded vesicle found in the cytoplasm of the cell." [GOC:ai, GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "cytoplasmic membrane bounded vesicle" EXACT []
+synonym: "cytoplasmic membrane-enclosed vesicle" EXACT []
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0016070
+name: RNA metabolic process
+namespace: biological_process
+def: "The cellular chemical reactions and pathways involving RNA, ribonucleic acid, one of the two main type of nucleic acid, consisting of a long, unbranched macromolecule formed from ribonucleotides joined in 3',5'-phosphodiester linkage." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: gosubset_prok
+synonym: "RNA metabolism" EXACT []
+xref: Reactome:REACT_107259 "Metabolism of RNA, Sus scrofa"
+xref: Reactome:REACT_107652 "Metabolism of RNA, Schizosaccharomyces pombe"
+xref: Reactome:REACT_110289 "Metabolism of RNA, Danio rerio"
+xref: Reactome:REACT_21257 "Metabolism of RNA, Homo sapiens"
+xref: Reactome:REACT_30579 "Metabolism of RNA, Xenopus tropicalis"
+xref: Reactome:REACT_31367 "Metabolism of RNA, Dictyostelium discoideum"
+xref: Reactome:REACT_33720 "Metabolism of RNA, Plasmodium falciparum"
+xref: Reactome:REACT_80071 "Metabolism of RNA, Caenorhabditis elegans"
+xref: Reactome:REACT_83630 "Metabolism of RNA, Taeniopygia guttata"
+xref: Reactome:REACT_84169 "Metabolism of RNA, Canis familiaris"
+xref: Reactome:REACT_85788 "Metabolism of RNA, Oryza sativa"
+xref: Reactome:REACT_88316 "Metabolism of RNA, Mus musculus"
+xref: Reactome:REACT_89992 "Metabolism of RNA, Saccharomyces cerevisiae"
+xref: Reactome:REACT_91556 "Metabolism of RNA, Bos taurus"
+xref: Reactome:REACT_92152 "Metabolism of RNA, Drosophila melanogaster"
+xref: Reactome:REACT_94876 "Metabolism of RNA, Arabidopsis thaliana"
+xref: Reactome:REACT_99403 "Metabolism of RNA, Rattus norvegicus"
+xref: Reactome:REACT_99885 "Metabolism of RNA, Gallus gallus"
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0016192
+name: vesicle-mediated transport
+namespace: biological_process
+alt_id: GO:0006899
+def: "A cellular transport process in which transported substances are moved in membrane-bounded vesicles; transported substances are enclosed in the vesicle lumen or located in the vesicle membrane. The process begins with a step that directs a substance to the forming vesicle, and includes vesicle budding and coating. Vesicles are then targeted to, and fuse with, an acceptor membrane." [GOC:ai, GOC:mah, ISBN:08789310662000]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+subset: gosubset_prok
+synonym: "nonselective vesicle transport" NARROW []
+synonym: "protein sorting along secretory pathway" RELATED []
+synonym: "vesicle trafficking" RELATED []
+synonym: "vesicle transport" EXACT []
+synonym: "vesicular transport" EXACT [GOC:mah]
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0016491
+name: oxidoreductase activity
+namespace: molecular_function
+def: "Catalysis of an oxidation-reduction (redox) reaction, a reversible chemical reaction in which the oxidation state of an atom or atoms within a molecule is altered. One substrate acts as a hydrogen or electron donor and becomes oxidized, while the other acts as hydrogen or electron acceptor and becomes reduced." [GOC:go_curators]
+comment: Note that enzymes of class EC:1.97.-.- should also be annotated to this term.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "oxidoreductase activity, acting on other substrates" NARROW []
+synonym: "redox activity" EXACT []
+xref: EC:1
+xref: Reactome:REACT_102858 "Diiodinated tyrosine can be deiodinated, Mus musculus"
+xref: Reactome:REACT_102973 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Canis familiaris"
+xref: Reactome:REACT_103874 "Monoiodinated tyrosine can be deiodinated, Canis familiaris"
+xref: Reactome:REACT_104604 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Danio rerio"
+xref: Reactome:REACT_105062 "Monoiodinated tyrosine can be deiodinated, Danio rerio"
+xref: Reactome:REACT_105121 "Monoiodinated tyrosine can be deiodinated, Caenorhabditis elegans"
+xref: Reactome:REACT_106088 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Rattus norvegicus"
+xref: Reactome:REACT_106276 "Monoiodinated tyrosine can be deiodinated, Rattus norvegicus"
+xref: Reactome:REACT_107002 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Sus scrofa"
+xref: Reactome:REACT_107467 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Rattus norvegicus"
+xref: Reactome:REACT_108745 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Taeniopygia guttata"
+xref: Reactome:REACT_109500 "Monoiodinated tyrosine can be deiodinated, Bos taurus"
+xref: Reactome:REACT_110582 "Diiodinated tyrosine can be deiodinated, Rattus norvegicus"
+xref: Reactome:REACT_115316 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Drosophila melanogaster"
+xref: Reactome:REACT_15389 "Monoiodinated tyrosine can be deiodinated, Homo sapiens"
+xref: Reactome:REACT_15410 "Diiodinated tyrosine can be deiodinated, Homo sapiens"
+xref: Reactome:REACT_17006 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Homo sapiens"
+xref: Reactome:REACT_17042 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Homo sapiens"
+xref: Reactome:REACT_29212 "Diiodinated tyrosine can be deiodinated, Canis familiaris"
+xref: Reactome:REACT_30160 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Mus musculus"
+xref: Reactome:REACT_31762 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Gallus gallus"
+xref: Reactome:REACT_32960 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Bos taurus"
+xref: Reactome:REACT_34705 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Mus musculus"
+xref: Reactome:REACT_44470 "Monoiodinated tyrosine can be deiodinated, Mus musculus"
+xref: Reactome:REACT_78923 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Taeniopygia guttata"
+xref: Reactome:REACT_84842 "Diiodinated tyrosine can be deiodinated, Gallus gallus"
+xref: Reactome:REACT_86178 "Monoiodinated tyrosine can be deiodinated, Xenopus tropicalis"
+xref: Reactome:REACT_88304 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Bos taurus"
+xref: Reactome:REACT_89057 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Gallus gallus"
+xref: Reactome:REACT_90394 "Diiodinated tyrosine can be deiodinated, Xenopus tropicalis"
+xref: Reactome:REACT_91638 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Arabidopsis thaliana"
+xref: Reactome:REACT_91952 "Monoiodinated tyrosine can be deiodinated, Gallus gallus"
+xref: Reactome:REACT_92075 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Xenopus tropicalis"
+xref: Reactome:REACT_92434 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Canis familiaris"
+xref: Reactome:REACT_93539 "Diiodinated tyrosine can be deiodinated, Drosophila melanogaster"
+xref: Reactome:REACT_93974 "Diiodinated tyrosine can be deiodinated, Taeniopygia guttata"
+xref: Reactome:REACT_95169 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR2], Danio rerio"
+xref: Reactome:REACT_95558 "Monoiodinated tyrosine can be deiodinated, Sus scrofa"
+xref: Reactome:REACT_95573 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Caenorhabditis elegans"
+xref: Reactome:REACT_97234 "Diiodinated tyrosine can be deiodinated, Caenorhabditis elegans"
+xref: Reactome:REACT_97568 "Diiodinated tyrosine can be deiodinated, Sus scrofa"
+xref: Reactome:REACT_97851 "Diiodinated tyrosine can be deiodinated, Bos taurus"
+xref: Reactome:REACT_98022 "Monoiodinated tyrosine can be deiodinated, Drosophila melanogaster"
+xref: Reactome:REACT_99085 "palmitoyl-CoA + 2 NADPH + 2 H+ => hexadecanol + 2 NADP+ [FAR1], Oryza sativa"
+xref: Reactome:REACT_99794 "Diiodinated tyrosine can be deiodinated, Danio rerio"
+xref: Reactome:REACT_99989 "Monoiodinated tyrosine can be deiodinated, Taeniopygia guttata"
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0016740
+name: transferase activity
+namespace: molecular_function
+def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: EC:2
+xref: Reactome:REACT_25050 "Molybdenum ion transfer onto molybdopterin, Homo sapiens"
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0016779
+name: nucleotidyltransferase activity
+namespace: molecular_function
+def: "Catalysis of the transfer of a nucleotidyl group to a reactant." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_yeast
+subset: gosubset_prok
+xref: EC:2.7.7
+is_a: GO:0016740 ! transferase activity
+
+[Term]
+id: GO:0016787
+name: hydrolase activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3." [ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+xref: EC:3
+xref: Reactome:REACT_110436 "Hydrolysis of phosphatidylcholine, Bos taurus"
+xref: Reactome:REACT_111159 "Partial proteolysis of antigen in phagolysosomes, Homo sapiens"
+xref: Reactome:REACT_15331 "Hydrolysis of phosphatidylcholine, Homo sapiens"
+xref: Reactome:REACT_83734 "Hydrolysis of phosphatidylcholine, Danio rerio"
+xref: Reactome:REACT_84047 "Hydrolysis of phosphatidylcholine, Xenopus tropicalis"
+xref: Reactome:REACT_87959 "Hydrolysis of phosphatidylcholine, Gallus gallus"
+xref: Reactome:REACT_88159 "Hydrolysis of phosphatidylcholine, Canis familiaris"
+xref: Reactome:REACT_90118 "Hydrolysis of phosphatidylcholine, Mus musculus"
+xref: Reactome:REACT_91045 "Hydrolysis of phosphatidylcholine, Taeniopygia guttata"
+xref: Reactome:REACT_98572 "Hydrolysis of phosphatidylcholine, Rattus norvegicus"
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0016791
+name: phosphatase activity
+namespace: molecular_function
+alt_id: GO:0003869
+alt_id: GO:0016302
+def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [EC:3.1.3, EC:3.1.3.41, GOC:curators, GOC:pg]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "4-nitrophenylphosphatase activity" NARROW []
+synonym: "4-nitrophenylphosphate phosphohydrolase activity" NARROW [EC:3.1.3.41]
+synonym: "ecto-p-nitrophenyl phosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "K-pNPPase activity" NARROW [EC:3.1.3.41]
+synonym: "nitrophenyl phosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "NPPase activity" NARROW [EC:3.1.3.41]
+synonym: "p-nitrophenylphosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "p-nitrophenylphosphate phosphohydrolase activity" NARROW [EC:3.1.3.41]
+synonym: "para-nitrophenyl phosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "phosphatase" RELATED []
+synonym: "phosphoric monoester hydrolase activity" EXACT []
+synonym: "PNPPase activity" NARROW [EC:3.1.3.41]
+xref: EC:3.1.3
+xref: EC:3.1.3.41
+xref: MetaCyc:4-NITROPHENYLPHOSPHATASE-RXN
+xref: RHEA:21667
+is_a: GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0016829
+name: lyase activity
+namespace: molecular_function
+def: "Catalysis of the cleavage of C-C, C-O, C-N and other bonds by other means than by hydrolysis or oxidation, or conversely adding a group to a double bond. They differ from other enzymes in that two substrates are involved in one reaction direction, but only one in the other direction. When acting on the single substrate, a molecule is eliminated and this generates either a new double bond or a new ring." [EC:4.-.-.-, ISBN:0198547684]
+comment: Note that enzymes of class EC:4.99.-.- should also be annotated to this term.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "other lyase activity" NARROW []
+xref: EC:4
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0016853
+name: isomerase activity
+namespace: molecular_function
+def: "Catalysis of the geometric or structural changes within one molecule. Isomerase is the systematic name for any enzyme of EC class 5." [ISBN:0198506732]
+comment: Note that enzymes of class EC:5.99.-.- should also be annotated to this term.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "other isomerase activity" NARROW []
+xref: EC:5
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0016874
+name: ligase activity
+namespace: molecular_function
+def: "Catalysis of the joining of two substances, or two groups within a single molecule, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." [EC:6, GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "synthetase activity" EXACT [GOC:jh2]
+xref: EC:6
+xref: Reactome:REACT_115603 "Ligation of DNA at sites of patch replacement, Gallus gallus"
+xref: Reactome:REACT_116018 "Ligation of newly synthesized repair patch to incised DNA in GG-NER, Gallus gallus"
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0019725
+name: cellular homeostasis
+namespace: biological_process
+def: "Any process involved in the maintenance of an internal steady state at the level of the cell." [GOC:isa_complete, GOC:jl, ISBN:0395825172]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_plant
+subset: gosubset_prok
+is_a: GO:0008150 ! biological_process
+relationship: occurs_in GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0030163
+name: protein catabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the breakdown of a protein by the destruction of the native, active configuration, with or without the hydrolysis of peptide bonds." [GOC:mah]
+comment: This term refers to the breakdown of mature proteins. For cleavage events involved in generating a mature protein from a precursor, consider instead the term 'protein maturation ; GO:0051604' and its children.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_pombe
+subset: gosubset_prok
+synonym: "pheromone catabolic process" RELATED []
+synonym: "pheromone catabolism" RELATED []
+synonym: "protein breakdown" EXACT []
+synonym: "protein catabolism" EXACT []
+synonym: "protein degradation" EXACT []
+xref: Wikipedia:Protein_catabolism
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0030234
+name: enzyme regulator activity
+namespace: molecular_function
+def: "Binds to and modulates the activity of an enzyme." [GOC:mah]
+comment: GO:0030234 is reserved for cases when the regulator directly interacts with the enzyme. When regulation of enzyme activity is achieved without enzyme binding, or when the mechanism of regulation is unknown, instead annotate to 'regulation of catalytic activity ; GO:0050790'.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "catalytic regulator activity" EXACT [GOC:dph]
+synonym: "enzyme modulator" EXACT []
+is_a: GO:0003674 ! molecular_function
+relationship: has_part GO:0005515 ! protein binding
+relationship: part_of GO:0050789 ! regulation of biological process
+relationship: regulates GO:0003674 ! molecular_function
+relationship: regulates GO:0008150 ! biological_process
+
+[Term]
+id: GO:0030427
+name: site of polarized growth
+namespace: cellular_component
+alt_id: GO:0000134
+alt_id: GO:0030483
+def: "Any part of a cell where non-isotropic growth takes place." [GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_pir
+subset: goslim_yeast
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0030447
+name: filamentous growth
+namespace: biological_process
+def: "The process in which a multicellular organism, a unicellular organism or a group of unicellular organisms grow in a threadlike, filamentous shape." [GOC:mcc, PMID:11729141]
+subset: goslim_aspergillus
+subset: goslim_candida
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0030448
+name: hyphal growth
+namespace: biological_process
+def: "Growth of fungi as threadlike, tubular structures that may contain multiple nuclei and may or may not be divided internally by septa, or cross-walls." [GOC:mcc, ISBN:0471522295]
+subset: goslim_candida
+is_a: GO:0030447 ! filamentous growth
+
+[Term]
+id: GO:0030533
+name: triplet codon-amino acid adaptor activity
+namespace: molecular_function
+def: "The codon binding activity of a tRNA that positions an activated amino acid, mediating its insertion at the correct point in the sequence of a nascent polypeptide chain during protein synthesis." [GOC:hjd, GOC:mtg_MIT_16mar07, ISBN:0198506732]
+comment: Note that this term can be used in place of the obsolete term 'transfer RNA ; GO:0005563'.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_yeast
+synonym: "transfer RNA" RELATED []
+synonym: "tRNA" RELATED []
+is_a: GO:0003723 ! RNA binding
+relationship: part_of GO:0006412 ! translation
+
+[Term]
+id: GO:0032196
+name: transposition
+namespace: biological_process
+def: "Any process involved in mediating the movement of discrete segments of DNA between nonhomologous sites." [GOC:jp, ISBN:1555812090]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+xref: Wikipedia:Transposon
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0042221
+name: response to chemical
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "response to chemical stimulus" EXACT [GOC:dos]
+synonym: "response to chemical substance" EXACT []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0042254
+name: ribosome biogenesis
+namespace: biological_process
+alt_id: GO:0007046
+def: "A cellular process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of ribosome subunits; includes transport to the sites of protein synthesis." [GOC:ma]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+subset: gosubset_prok
+synonym: "ribosomal chaperone activity" RELATED []
+synonym: "ribosome biogenesis and assembly" EXACT []
+xref: Wikipedia:Ribosome_biogenesis
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0042493
+name: response to drug
+namespace: biological_process
+alt_id: GO:0017035
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a drug stimulus. A drug is a substance used in the diagnosis, treatment or prevention of a disease." [GOC:jl]
+subset: goslim_candida
+subset: gosubset_prok
+synonym: "drug resistance" RELATED []
+synonym: "drug susceptibility/resistance" RELATED []
+is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:0042710
+name: biofilm formation
+namespace: biological_process
+def: "A process in which planktonically growing microorganisms grow at a liquid-air interface or on a solid substrate under the flow of a liquid and produce extracellular polymers that facilitate matrix formation, resulting in a change in the organisms' growth rate and gene transcription." [GOC:di, PMID:11932229]
+subset: gocheck_do_not_annotate
+subset: gocheck_do_not_manually_annotate
+subset: goslim_candida
+subset: goslim_pir
+subset: gosubset_prok
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0044419
+name: interspecies interaction between organisms
+namespace: biological_process
+def: "Any process in which an organism has an effect on an organism of a different species." [GOC:cc]
+subset: goslim_candida
+subset: goslim_pir
+subset: gosubset_prok
+synonym: "interaction with another species" EXACT []
+synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction with other organisms" EXACT []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0045182
+name: translation regulator activity
+namespace: molecular_function
+def: "Any molecular function involved in the initiation, activation, perpetuation, repression or termination of polypeptide synthesis at the ribosome." [GOC:ai]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: gosubset_prok
+synonym: "translation factor activity" EXACT []
+is_a: GO:0003674 ! molecular_function
+relationship: part_of GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0045333
+name: cellular respiration
+namespace: biological_process
+def: "The enzymatic release of energy from inorganic and organic compounds (especially carbohydrates and fats) which either requires oxygen (aerobic respiration) or does not (anaerobic respiration)." [GOC:das, ISBN:0140513590, ISBN:0198506732]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+subset: gosubset_prok
+synonym: "oxidative metabolic process" EXACT []
+synonym: "oxidative metabolism" EXACT []
+synonym: "respiration" BROAD []
+xref: Wikipedia:Cellular_respiration
+is_a: GO:0006091 ! generation of precursor metabolites and energy
+
+[Term]
+id: GO:0048468
+name: cell development
+namespace: biological_process
+def: "The process whose specific outcome is the progression of the cell over time, from its formation to the mature structure. Cell development does not include the steps involved in committing a cell to a specific fate." [GOC:go_curators]
+subset: goslim_candida
+subset: gosubset_prok
+synonym: "terminal differentiation" RELATED [GOC:dph, GOC:tb]
+is_a: GO:0008150 ! biological_process
+relationship: part_of GO:0008150 ! biological_process
+
+[Term]
+id: GO:0050789
+name: regulation of biological process
+namespace: biological_process
+alt_id: GO:0050791
+def: "Any process that modulates the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:ai, GOC:go_curators]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: gosubset_prok
+synonym: "regulation of physiological process" EXACT []
+is_a: GO:0008150 ! biological_process
+relationship: regulates GO:0008150 ! biological_process
+
+[Term]
+id: GO:0070732
+name: spindle envelope
+namespace: cellular_component
+def: "An organelle envelope that surrounds the chromosomes and the central part of the spindle apparatus during mitosis and meiosis; observed in many invertebrates. The spindle envelope consists of membrane layers, called parafusorial membranes, derived from endoplasmic reticulum membrane; in male meiosis it forms during prometaphase and persists until early in the ensuing interphase." [GOC:mah, GOC:sart, PMID:19417004, PMID:6428889]
+subset: goslim_candida
+is_a: GO:0005575 ! cellular_component
+relationship: part_of GO:0005575 ! cellular_component
+created_by: midori
+creation_date: 2009-06-18T12:00:59Z
+
+[Term]
+id: GO:0070783
+name: growth of unicellular organism as a thread of attached cells
+namespace: biological_process
+def: "A filamentous growth process in which cells remain attached after division and form thread-like filaments that may penetrate into a solid growth medium such as an agar plate, exhibited by unicellular fungi under certain growth conditions." [GOC:mah, GOC:mcc]
+subset: goslim_candida
+is_a: GO:0030447 ! filamentous growth
+created_by: midori
+creation_date: 2009-07-07T02:21:14Z
+
+[Term]
+id: GO:0071555
+name: cell wall organization
+namespace: biological_process
+alt_id: GO:0007047
+alt_id: GO:0044234
+def: "A process that results in the assembly, arrangement of constituent parts, or disassembly of the cell wall, the rigid or semi-rigid envelope lying outside the cell membrane of plant, fungal and most prokaryotic cells, maintaining their shape and protecting them from osmotic lysis." [GOC:mah]
+subset: goslim_candida
+subset: goslim_pir
+subset: gosubset_prok
+synonym: "cell wall organisation" EXACT [GOC:curators]
+synonym: "cell wall organisation in other organism" EXACT [GOC:mah]
+synonym: "cell wall organization and biogenesis" RELATED [GOC:mah]
+synonym: "cell wall organization at cellular level" EXACT [GOC:mah]
+synonym: "cell wall organization in other organism" EXACT []
+synonym: "cellular cell wall organisation" EXACT [GOC:curators]
+synonym: "cellular cell wall organization" EXACT []
+is_a: GO:0008150 ! biological_process
+created_by: midori
+creation_date: 2010-01-13T03:33:07Z
+
+[Typedef]
+id: ends_during
+name: ends_during
+namespace: external
+xref: RO:0002093
+
+[Typedef]
+id: happens_during
+name: happens_during
+namespace: external
+xref: RO:0002092
+is_transitive: true
+is_a: ends_during ! ends_during
+
+[Typedef]
+id: has_part
+name: has_part
+namespace: external
+xref: BFO:0000051
+is_transitive: true
+
+[Typedef]
+id: negatively_regulates
+name: negatively regulates
+namespace: external
+xref: RO:0002212
+is_a: regulates ! regulates
+transitive_over: part_of ! part of
+
+[Typedef]
+id: never_in_taxon
+name: never_in_taxon
+namespace: external
+xref: RO:0002161
+expand_assertion_to: "Class: ?X DisjointWith: RO_0002162 some ?Y" []
+is_metadata_tag: true
+is_class_level: true
+
+[Typedef]
+id: occurs_in
+name: occurs in
+namespace: external
+xref: BFO:0000066
+holds_over_chain: part_of occurs_in
+transitive_over: part_of ! part of
+
+[Typedef]
+id: part_of
+name: part of
+namespace: external
+xref: BFO:0000050
+is_transitive: true
+inverse_of: has_part ! has_part
+
+[Typedef]
+id: positively_regulates
+name: positively regulates
+namespace: external
+xref: RO:0002213
+is_a: regulates ! regulates
+transitive_over: part_of ! part of
+
+[Typedef]
+id: regulates
+name: regulates
+namespace: external
+xref: RO:0002211
+transitive_over: part_of ! part of
+
+[Typedef]
+id: starts_during
+name: starts_during
+namespace: external
+xref: RO:0002091
+
