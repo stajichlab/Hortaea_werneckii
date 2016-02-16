@@ -3,7 +3,7 @@ x <- read.delim("cuffnorm_combined/genes.count_table",row.names="tracking_id")
 dim(x)
 newx <- x[,c(5,6,1,2,3,4)]
 # group <- factor(c(1,1,2,2,3,3,));
-samplenames <- c("Salt_0","Salt_0","Salt_10","Salt_10","Salt_20","Salt_20")
+samplenames <- c("Salt_0", "Salt_0","Salt_10","Salt_10","Salt_20","Salt_20")
 head(x)
 head(newx)
 y <- DGEList(counts=newx,group=factor(samplenames))
@@ -55,11 +55,11 @@ plotBCV(d2)
 
 
 et12 <- exactTest(d1, pair=c(1,2))
-et13 <- exactTest(d1, pair=c(1,3))
-et23 <- exactTest(d1, pair=c(2,3))
+et13 <- exactTest(d1, pair=c(3,1))
+et23 <- exactTest(d1, pair=c(3,2))
 toptags <- topTags(et12,n=1500,adjust.method="BH", sort.by="PValue")
 colnames(toptags)
-write.csv(toptags,file="toptags_0vs10.csv")
+write.csv(toptags,file="toptags_10vs0.csv")
 
 toptags <- topTags(et13,n=1500, adjust.method="BH", sort.by="PValue")
 write.csv(toptags,file="toptags_0vs20.csv")
@@ -92,11 +92,11 @@ abline(h = c(-2, 2), col = "blue")
 
 fit <- glmFit(d2, design.mat)
 
-lrt12 <- glmLRT(fit, contrast=c(1,-1,0))
+lrt12 <- glmLRT(fit, contrast = c(-1,1,0))
 lrt13 <- glmLRT(fit, contrast=c(1,0,-1))
 lrt23 <- glmLRT(fit, contrast=c(0,1,-1))
 toptags <- topTags(lrt12, n=1500)
-write.csv(toptags,file="toptags_glm_0vs10.csv")
+write.csv(toptags,file="toptags_glm_10vs0.csv")
 toptags <- topTags(lrt13, n=1500)
 write.csv(toptags,file="toptags_glm_0vs20.csv")
 toptags <- topTags(lrt23, n=1500)

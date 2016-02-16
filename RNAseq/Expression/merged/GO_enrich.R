@@ -2,7 +2,7 @@
 
 #[Done 2015-05-19 TODO - stratify this by UP reg vs DOWN reg - right now is just diff expr] But U.G.L.Y. code lots of copy paste since I fail at making loops in R
 
-CN0 <-read.csv("toptags_0vs10.csv",header=T,sep=",",stringsAsFactors=F,
+CN0 <-read.csv("toptags_10vs0.csv",header=T,sep=",",stringsAsFactors=F,
                quote="\"")
 
 CN1 <-read.csv("toptags_0vs20.csv",header=T,sep=",",stringsAsFactors=F,
@@ -14,8 +14,8 @@ CN2 <-read.csv("toptags_10vs20.csv",header=T,sep=",",stringsAsFactors=F,
 
 
 summary(CN0)
-genes.up <- subset(CN0[,1],CN0$logFC > 0 & CN0$FDR < 0.05)
-genes.dn <- subset(CN0[,1],CN0$logFC < 0 & CN0$FDR < 0.05)
+genes.up <- subset(CN0[,1],CN0$logFC >= 0 & CN0$FDR < 0.01)
+genes.dn <- subset(CN0[,1],CN0$logFC < 0 & CN0$FDR < 0.01)
 
 head(genes.up)
 head(genes.dn)
@@ -32,7 +32,7 @@ mode(universe)
 mode(genes.up)
 mode(genes.dn)
 
-
+# this should be go-slimmed so more meaningful
 godat <- read.table("Hw2.go",header=F);
 goframeData <- data.frame(godat$V3, godat$V2, godat$V1)
 
@@ -60,7 +60,7 @@ params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 Over <- hyperGTest(params)
 summary(Over)
 Over
-write.csv(summary(Over),"top0vs10_GT/OverMF_enrich.csv");
+write.csv(summary(Over),"top10vs0_GT/OverMF_enrich.csv");
 paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
           geneSetCollection=gsc,
 	  geneIds = genes.up,
@@ -73,7 +73,7 @@ paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 OverCC <- hyperGTest(paramsCC)
 summary(OverCC)
 OverCC
-write.csv(summary(OverCC),"top0vs10_GT/OverCC_enrich.csv");
+write.csv(summary(OverCC),"top10vs0_GT/OverCC_enrich.csv");
 
 paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
           geneSetCollection=gsc,
@@ -87,7 +87,7 @@ paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 OverBP <- hyperGTest(paramsBP)
 summary(OverBP)
 OverBP
-write.csv(summary(OverBP),"top0vs10_GT/OverBP_enrich.csv");
+write.csv(summary(OverBP),"top10vs0_GT/OverBP_enrich.csv");
 
 
 params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
@@ -103,7 +103,7 @@ params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 Under <- hyperGTest(params)
 summary(Under)
 Under
-write.csv(summary(Under),"top0vs10_GT/UnderMF_enrich.csv");
+write.csv(summary(Under),"top10vs0_GT/UnderMF_enrich.csv");
 
 
 paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
@@ -118,7 +118,7 @@ paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 UnderCC <- hyperGTest(paramsCC)
 summary(UnderCC)
 UnderCC
-write.csv(summary(UnderCC),"top0vs10_GT/UnderCC_enrich.csv");
+write.csv(summary(UnderCC),"top10vs0_GT/UnderCC_enrich.csv");
 
 paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
           geneSetCollection=gsc,
@@ -132,7 +132,7 @@ paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 UnderBP <- hyperGTest(paramsBP)
 summary(UnderBP)
 UnderBP
-write.csv(summary(UnderBP),"top0vs10_GT/UnderBP_enrich.csv");
+write.csv(summary(UnderBP),"top10vs0_GT/UnderBP_enrich.csv");
 
 ## down-regulated
 params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
@@ -147,7 +147,7 @@ params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 Over <- hyperGTest(params)
 summary(Over)
 Over
-write.csv(summary(Over),"top0vs10_LT/OverMF_enrich.csv");
+write.csv(summary(Over),"top10vs0_LT/OverMF_enrich.csv");
 paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
           geneSetCollection=gsc,
 	  geneIds = genes.dn,
@@ -160,7 +160,7 @@ paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 OverCC <- hyperGTest(paramsCC)
 summary(OverCC)
 OverCC
-write.csv(summary(OverCC),"top0vs10_LT/OverCC_enrich.csv");
+write.csv(summary(OverCC),"top10vs0_LT/OverCC_enrich.csv");
 
 paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
           geneSetCollection=gsc,
@@ -174,7 +174,7 @@ paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 OverBP <- hyperGTest(paramsBP)
 summary(OverBP)
 OverBP
-write.csv(summary(OverBP),"top0vs10_LT/OverBP_enrich.csv");
+write.csv(summary(OverBP),"top10vs0_LT/OverBP_enrich.csv");
 
 
 params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
@@ -190,7 +190,7 @@ params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 Under <- hyperGTest(params)
 summary(Under)
 Under
-write.csv(summary(Under),"top0vs10_LT/UnderMF_enrich.csv");
+write.csv(summary(Under),"top10vs0_LT/UnderMF_enrich.csv");
 
 
 paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
@@ -205,7 +205,7 @@ paramsCC <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 UnderCC <- hyperGTest(paramsCC)
 summary(UnderCC)
 UnderCC
-write.csv(summary(UnderCC),"top0vs10_LT/UnderCC_enrich.csv");
+write.csv(summary(UnderCC),"top10vs0_LT/UnderCC_enrich.csv");
 
 paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
           geneSetCollection=gsc,
@@ -219,7 +219,7 @@ paramsBP <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
 UnderBP <- hyperGTest(paramsBP)
 summary(UnderBP)
 UnderBP
-write.csv(summary(UnderBP),"top0vs10_LT/UnderBP_enrich.csv");
+write.csv(summary(UnderBP),"top10vs0_LT/UnderBP_enrich.csv");
 
 
 
