@@ -43,6 +43,17 @@ setonlyUpin20 <- setdiff(et10.20GenesUp,et10.0GenesUp)
 setonlyDnin0 <- setdiff(et10.0GenesDn,et10.20GenesDn)
 setonlyDnin20 <- setdiff(et10.20GenesDn,et10.0GenesDn)
 
+
+write.table(intersectUp, "upCommon/genes.txt",col.names=F,quote=F,row.names=F)
+write.table(intersectDn, "dnCommon/genes.txt",col.names=F,quote=F,row.names=F)
+
+write.table(setonlyUpin0, "onlyUpIn0/genes.txt",col.names=F,quote=F,row.names=F)
+write.table(setonlyUpin20, "onlyUpIn20/genes.txt",col.names=F,quote=F,row.names=F)
+
+write.table(setonlyDnin0, "onlyDnIn0/genes.txt",col.names=F,quote=F,row.names=F)
+write.table(setonlyDnin20, "onlyDnIn20/genes.txt",col.names=F,quote=F,row.names=F)
+
+quit()
 head(setonlyDnin0)
 
 allgenes <- read.table("cuffnorm_combined/genes.attr_table",
@@ -105,7 +116,7 @@ for (type in types ) {
     res <- hyperGTest(params)
     summary(res)
     file=sprintf("%s/%s%s_enrich.csv","upCommon",direc,type)  
-    write.csv(summary(res),file)
+    write.csv(summary(res),file)    
   }
 }
 
