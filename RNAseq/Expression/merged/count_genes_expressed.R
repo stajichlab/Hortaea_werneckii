@@ -1,0 +1,8 @@
+readcount <- read.table("cuffnorm_combined/genes.count_table",header=T,row.names=1)
+#summary(readcount)
+sums <- rowSums(readcount)
+noexp = subset(sums,sums == 0)
+length(sums)
+length(noexp)
+per = 100 * (1 - (length(noexp) / length(sums)))
+sprintf("%d noexp, %d total, %.2f%%",length(noexp),length(sums),per)
