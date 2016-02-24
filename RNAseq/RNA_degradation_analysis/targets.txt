@@ -1,0 +1,8 @@
+# header
+FileName1	FileName2	SampleName	Factor	SampleLong
+Sample_0.1_1.fastq.gz	Sample_0.1_2.fastq.gz	Sample_0.1	Salt0	Salt0_1
+Sample_0.2_1.fastq.gz	Sample_0.2_2.fastq.gz	Sample_0.2	Salt0	Salt0_2
+Sample_10.1_1.fastq.gz	Sample_10.1_2.fastq.gz	Sample_10.1	Salt10	Salt10_1
+Sample_10.2_1.fastq.gz	Sample_10.2_2.fastq.gz	Sample_10.2	Salt10	Salt10_2
+Sample_20.1_1.fastq.gz	Sample_20.1_2.fastq.gz	Sample_20.1	Salt20	Salt20_1
+Sample_20.2_1.fastq.gz	Sample_20.2_2.fastq.gz	Sample_20.2	Salt20	Salt20_2
