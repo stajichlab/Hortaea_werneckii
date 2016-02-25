@@ -1,0 +1,6 @@
+"","GOMFID","Pvalue","OddsRatio","ExpCount","Count","Size","Term"
+"1","GO:0017111",0.0196680347751125,0,3.8300518134715,0,336,"nucleoside-triphosphatase activity"
+"2","GO:0016818",0.0196680347751125,0,3.8300518134715,0,336,"hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides"
+"3","GO:0016817",0.0196680347751125,0,3.8300518134715,0,336,"hydrolase activity, acting on acid anhydrides"
+"4","GO:0016462",0.0196680347751125,0,3.8300518134715,0,336,"pyrophosphatase activity"
+"5","GO:0003723",0.0373753895891556,0,3.21450777202073,0,282,"RNA binding"

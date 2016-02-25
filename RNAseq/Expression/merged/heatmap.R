@@ -1,0 +1,15 @@
+library(edgeR)
+library(gplots)
+#library(DESeq2)
+library(RColorBrewer)
+
+pdf("heatmap_Hwsalts.pdf")
+x <- read.delim("cuffnorm_combined/genes.count_table",row.names="tracking_id")
+dim(x)
+newx <- x[,c(5,6,1,2,3,4)]
+samplenames <- c("Salt_0", "Salt_0","Salt_10","Salt_10","Salt_20","Salt_20")
+y <- DGEList(counts=newx,group=factor(samplenames))
+colors <- brewer.pal(11,"RdBu")
+#colorRampPalette(c("red","white","darkblue"))(100)
+logCPM <- cpm(y,log=TRUE,prior.count=2)
+heatmap.2(logCPM,col=colors,scale="row", trace="none")

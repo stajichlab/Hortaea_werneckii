@@ -1,0 +1,4 @@
+"","GOBPID","Pvalue","OddsRatio","ExpCount","Count","Size","Term"
+"1","GO:0006464",0.0306161274993754,0.542312636419322,17.5614310148233,10,487,"cellular protein modification process"
+"2","GO:0036211",0.0306161274993754,0.542312636419322,17.5614310148233,10,487,"protein modification process"
+"3","GO:0043412",0.0458459126606175,0.608273056057866,20.4102052451539,13,566,"macromolecule modification"

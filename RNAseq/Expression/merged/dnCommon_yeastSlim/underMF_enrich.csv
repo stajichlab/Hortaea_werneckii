@@ -1,0 +1,6 @@
+"","GOMFID","Pvalue","OddsRatio","ExpCount","Count","Size","Term"
+"1","GO:0003723",0.00382305711988843,0,5.42245250431779,0,282,"RNA binding"
+"2","GO:0005198",0.00711460993064068,0,4.82636729994243,0,251,"structural molecule activity"
+"3","GO:0003735",0.0140231725903555,0,4.17259643062752,0,217,"structural constituent of ribosome"
+"4","GO:0016741",0.0443419023942937,0,3.0573402417962,0,159,"transferase activity, transferring one-carbon groups"
+"5","GO:0008168",0.0443419023942937,0,3.0573402417962,0,159,"methyltransferase activity"

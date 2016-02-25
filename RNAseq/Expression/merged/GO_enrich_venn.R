@@ -53,7 +53,6 @@ write.table(setonlyUpin20, "onlyUpIn20/genes.txt",col.names=F,quote=F,row.names=
 write.table(setonlyDnin0, "onlyDnIn0/genes.txt",col.names=F,quote=F,row.names=F)
 write.table(setonlyDnin20, "onlyDnIn20/genes.txt",col.names=F,quote=F,row.names=F)
 
-quit()
 head(setonlyDnin0)
 
 allgenes <- read.table("cuffnorm_combined/genes.attr_table",
@@ -72,11 +71,6 @@ mode(setonlyUpin20)
 mode(setonlyDnin20)
 mode(setonlyDnin0)
 
-# this should be go-slimmed so more meaningful
-godat <- read.table("Hw2.go",header=F);
-goframeData <- data.frame(godat$V3, godat$V2, godat$V1)
-
-
 
 
 types = c("MF","BP","CC")
@@ -91,124 +85,45 @@ for (type in types ) {
 library("AnnotationDbi")
 library("GSEABase")
 library("GOstats")
-
+# this should be go-slimmed so more meaningful
+godat <- read.table("Hw2.yeastmap.GO.tab",header=F);
+goframeData <- data.frame(godat$V1, godat$V2, godat$V3)
 
 goFrame <- GOFrame(goframeData,organism="Hortaea werneckii")
 goAllFrame=GOAllFrame(goFrame)
 
 gsc <- GeneSetCollection(goAllFrame, setType = GOCollection())
 
-##upregulated
 
-types = c("MF","BP","CC")
-tstdir = c("over","under")
-for (type in types ) {
-  for (direc in tstdir ) {
-    params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
-                                 geneSetCollection=gsc,
-                                 geneIds = intersectUp,
-                                 universeGeneIds = universe,
-                                 ontology = type,
-                                 pvalueCutoff = 0.05,
-                                 conditional = FALSE,
-                                 testDirection = direc)
-  
-    res <- hyperGTest(params)
-    summary(res)
-    file=sprintf("%s/%s%s_enrich.csv","upCommon",direc,type)  
-    write.csv(summary(res),file)    
+goSet<- function(genelist, setname) {
+  types = c("MF","BP","CC")
+  tstdir = c("over","under")
+
+  for (type in types ) {
+    for (direc in tstdir ) {
+      params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
+                                   geneSetCollection=gsc,
+                                   geneIds = genelist,
+                                   universeGeneIds = universe,
+                                   ontology = type,
+                                   pvalueCutoff = 0.05,
+                                   conditional = FALSE,
+                                   testDirection = direc)
+
+      res <- hyperGTest(params)
+      summary(res)
+      file=sprintf("%s/%s%s_enrich.csv",setname,direc,type)
+      write.csv(summary(res),file)
+    }
   }
 }
 
-for (type in types ) {
-  for (direc in tstdir ) {
-    params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
-                                 geneSetCollection=gsc,
-                                 geneIds = intersectDn,
-                                 universeGeneIds = universe,
-                                 ontology = type,
-                                 pvalueCutoff = 0.05,
-                                 conditional = FALSE,
-                                 testDirection = direc)
-  
-  res <- hyperGTest(params)
-  summary(res)
-  file=sprintf("%s/%s%s_enrich.csv","dnCommon",direc,type)  
-  write.csv(summary(res),file)
-  }
-}
-
-for (type in types ) {
-  for (direc in tstdir ) {
-    params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
-                                 geneSetCollection=gsc,
-                                 geneIds = setonlyUpin0,
-                                 universeGeneIds = universe,
-                                 ontology = type,
-                                 pvalueCutoff = 0.05,
-                                 conditional = FALSE,
-                                 testDirection = direc)
-  
-  res <- hyperGTest(params)
-  summary(res)
-  file=sprintf("%s/%s%s_enrich.csv","onlyUpIn0",direc,type)  
-  write.csv(summary(res),file)
-  }
-}
-
-for (type in types ) {
-  for (direc in tstdir ) {
-    params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
-                                 geneSetCollection=gsc,
-                                 geneIds = setonlyUpin20,
-                                 universeGeneIds = universe,
-                                 ontology = type,
-                                 pvalueCutoff = 0.05,
-                                 conditional = FALSE,
-                                 testDirection = direc)
-  
-  res <- hyperGTest(params)
-  summary(res)
-  file=sprintf("%s/%s%s_enrich.csv","onlyUpIn20",direc,type)  
-  write.csv(summary(res),file)
-  }
-}
-
-for (type in types ) {
-  for (direc in tstdir ) {
-    params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
-                                 geneSetCollection=gsc,
-                                 geneIds = setonlyDnin0,
-                                 universeGeneIds = universe,
-                                 ontology = type,
-                                 pvalueCutoff = 0.05,
-                                 conditional = FALSE,
-                                 testDirection = direc)
-  
-  res <- hyperGTest(params)
-  summary(res)
-  file=sprintf("%s/%s%s_enrich.csv","onlyDnIn0",direc,type)  
-  write.csv(summary(res),file)
-  }
-}
-
-for (type in types ) {
-  for (direc in tstdir ) {
-    params <- GSEAGOHyperGParams(name="My Custom GSEA based annot Params",
-                                 geneSetCollection=gsc,
-                                 geneIds = setonlyDnin20,
-                                 universeGeneIds = universe,
-                                 ontology = type,
-                                 pvalueCutoff = 0.05,
-                                 conditional = FALSE,
-                                 testDirection = direc)
-  
-  res <- hyperGTest(params)
-  summary(res)
-  file=sprintf("%s/%s%s_enrich.csv","onlyDnIn20",direc,type)  
-  write.csv(summary(res),file)
-  }
-}
+goSet(intersectUp,"upCommon_yeastSlim")
+goSet(intersectDn,"dnCommon_yeastSlim")
+goSet(setonlyUpin0,"onlyUpIn0_yeastSlim")
+goSet(setonlyUpin20,"onlyUpIn20_yeastSlim")
+goSet(setonlyDnin0,"onlyDnIn0_yeastSlim")
+goSet(setonlyDnin20,"onlyDnIn20_yeastSlim")
 
 
 
