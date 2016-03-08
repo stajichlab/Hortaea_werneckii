@@ -1,6 +1,5 @@
 #PBS -l nodes=1:ppn=4,mem=16gb -q js  -j oe -N sam2bam.HwRNASeq
-#PBS -d /shared/stajichlab/projects/Hortaea_werneckii/RNAseq/aln
-module load samtools/1.1
+module load samtools
 module load java
 module load picard
 
@@ -29,5 +28,5 @@ if [ ! -f $PREF.unsrt.bam ]; then
 time samtools view -bS $IN > $PREF.unsrt.bam 
 fi
 if [ ! -f $PREF.bam ]; then
-time samtools sort -@4 -m4G  $PREF.unsrt.bam $PREF
+#time samtools sort -@4 -m4G  $PREF.unsrt.bam $PREF
 fi
