@@ -1,0 +1,184 @@
+##sequence-region   chr320 1 33327
+MT	GenBank	region	1	33327	.	+	1	ID=region1;Name=unknown;Note=Hortaea werneckii.,Complete genome.;comment1=Complete genome.;date=08-OCT-2015;mol_type=genomic DNA;organelle=mitochondrion;organism=Hortaea werneckii;type=genomic
+MT	GenBank	gene	1	1124	.	-	1	ID=gene3947;Name=nad4;Note=copy 1
+MT	GenBank	mRNA	1	1124	.	-	1	ID=mRNA3915;Parent=gene3947
+MT	GenBank	CDS	1	1124	.	-	1	ID=CDS1;Parent=mRNA3915;eC_number=1.6.5.3;Name=nad4;codon_start=1;product=NADH dehydrogenase subunit 4;transl_table=4;translation=length.375
+MT	GenBank	exon	1	1124	.	-	1	ID=exon1;Parent=mRNA3915
+MT	GenBank	gene	1310	1975	.	-	1	ID=gene3948;Name=nad6;Note=copy 1
+MT	GenBank	mRNA	1310	1975	.	-	1	ID=mRNA3916;Parent=gene3948
+MT	GenBank	CDS	1310	1975	.	-	1	ID=CDS2;Parent=mRNA3916;eC_number=1.6.5.3;Name=nad6;codon_start=1;product=NADH dehydrogenase subunit 6;transl_table=4;translation=length.221
+MT	GenBank	exon	1310	1975	.	-	1	ID=exon2;Parent=mRNA3916
+MT	GenBank	gene	2177	3253	.	-	1	ID=gene3949;Name=nad1;Note=copy 1
+MT	GenBank	mRNA	2177	3253	.	-	1	ID=mRNA3917;Parent=gene3949
+MT	GenBank	CDS	2177	3253	.	-	1	ID=CDS3;Parent=mRNA3917;eC_number=1.6.5.3;Name=nad1;codon_start=1;product=NADH dehydrogenase subunit 1;transl_table=4;translation=length.358
+MT	GenBank	exon	2177	3253	.	-	1	ID=exon3;Parent=mRNA3917
+MT	GenBank	gene	3623	4327	.	-	1	ID=gene3950;Name=orf234;Note=copy 1
+MT	GenBank	mRNA	3623	4327	.	-	1	ID=mRNA3918;Parent=gene3950
+MT	GenBank	CDS	3623	4327	.	-	1	ID=CDS4;Parent=mRNA3918;Name=orf234;codon_start=1;product=hypothetical protein;transl_table=4;translation=length.234
+MT	GenBank	exon	3623	4327	.	-	1	ID=exon4;Parent=mRNA3918
+MT	GenBank	gene	4317	4541	.	-	1	ID=gene3951;Name=atp9;Note=copy 1
+MT	GenBank	mRNA	4317	4541	.	-	1	ID=mRNA3919;Parent=gene3951
+MT	GenBank	CDS	4317	4541	.	-	1	ID=CDS5;Parent=mRNA3919;eC_number=3.6.3.14;Name=atp9;codon_start=1;product=ATP synthase F0 subunit c;transl_table=4;translation=length.74
+MT	GenBank	exon	4317	4541	.	-	1	ID=exon5;Parent=mRNA3919
+MT	GenBank	gene	4843	4998	.	-	1	ID=gene3952;Name=atp9_2;Note=copy 2
+MT	GenBank	mRNA	4843	4998	.	-	1	ID=mRNA3920;Parent=gene3952
+MT	GenBank	CDS	4843	4998	.	-	1	ID=CDS6;Parent=mRNA3920;eC_number=3.6.3.14;Name=atp9_2;codon_start=1;product=ATP synthase F0 subunit c;transl_table=4;translation=length.51
+MT	GenBank	exon	4843	4998	.	-	1	ID=exon6;Parent=mRNA3920
+MT	GenBank	gene	5127	5197	.	-	1	ID=gene3953;Name=trnR(cct);Note=copy 1
+MT	GenBank	tRNA	5127	5197	.	-	1	ID=tRNA33;Parent=gene3953;Name=trnR(cct);anticodon=(pos:complement(5163..5165)%2Caa:Arg%2Cseq:cct);product=tRNA-Arg
+MT	GenBank	exon	5127	5197	.	-	1	ID=exon7;Parent=tRNA33;Name=trnR(cct)
+MT	GenBank	gene	5310	6860	.	-	1	ID=gene3954;Name=rns
+MT	GenBank	rRNA	5310	6860	.	-	1	ID=rRNA1;Parent=gene3954;Name=rns;product=small subunit ribosomal RNA
+MT	GenBank	exon	5310	6860	.	-	1	ID=exon8;Parent=rRNA1;Name=rns
+MT	GenBank	gene	6988	7059	.	-	1	ID=gene3955;Name=trnK(ttt);Note=copy 1
+MT	GenBank	tRNA	6988	7059	.	-	1	ID=tRNA34;Parent=gene3955;Name=trnK(ttt);anticodon=(pos:complement(7025..7027)%2Caa:Lys%2Cseq:ttt);product=tRNA-Lys
+MT	GenBank	exon	6988	7059	.	-	1	ID=exon9;Parent=tRNA34;Name=trnK(ttt)
+MT	GenBank	gene	7345	10621	.	-	1	ID=gene3956;Name=rnl
+MT	GenBank	rRNA	7345	10621	.	-	1	ID=rRNA2;Parent=gene3956;Name=rnl;product=large subunit ribosomal RNA
+MT	GenBank	exon	7345	10621	.	-	1	ID=exon10;Parent=rRNA2;Name=rnl
+MT	GenBank	gene	10629	10701	.	-	1	ID=gene3957;Name=trnP(tgg)
+MT	GenBank	tRNA	10629	10701	.	-	1	ID=tRNA35;Parent=gene3957;Name=trnP(tgg);anticodon=(pos:complement(10666..10668)%2Caa:Pro%2Cseq:tgg);product=tRNA-Pro
+MT	GenBank	exon	10629	10701	.	-	1	ID=exon11;Parent=tRNA35;Name=trnP(tgg)
+MT	GenBank	gene	10806	10891	.	-	1	ID=gene3958;Name=trnS(tga)
+MT	GenBank	tRNA	10806	10891	.	-	1	ID=tRNA36;Parent=gene3958;Name=trnS(tga);anticodon=(pos:complement(10855..10857)%2Caa:Ser%2Cseq:tga);product=tRNA-Ser
+MT	GenBank	exon	10806	10891	.	-	1	ID=exon12;Parent=tRNA36;Name=trnS(tga)
+MT	GenBank	gene	10927	10998	.	-	1	ID=gene3959;Name=trnI(gat)
+MT	GenBank	tRNA	10927	10998	.	-	1	ID=tRNA37;Parent=gene3959;Name=trnI(gat);anticodon=(pos:complement(10963..10965)%2Caa:Ile%2Cseq:gat);product=tRNA-Ile
+MT	GenBank	exon	10927	10998	.	-	1	ID=exon13;Parent=tRNA37;Name=trnI(gat)
+MT	GenBank	gene	11015	11086	.	-	1	ID=gene3960;Name=trnW(tca)
+MT	GenBank	tRNA	11015	11086	.	-	1	ID=tRNA38;Parent=gene3960;Name=trnW(tca);anticodon=(pos:complement(11051..11053)%2Caa:Trp%2Cseq:tca);product=tRNA-Trp
+MT	GenBank	exon	11015	11086	.	-	1	ID=exon14;Parent=tRNA38;Name=trnW(tca)
+MT	GenBank	gene	11187	11267	.	-	1	ID=gene3961;Name=trnS(gct)
+MT	GenBank	tRNA	11187	11267	.	-	1	ID=tRNA39;Parent=gene3961;Name=trnS(gct);anticodon=(pos:complement(11233..11235)%2Caa:Ser%2Cseq:gct);product=tRNA-Ser
+MT	GenBank	exon	11187	11267	.	-	1	ID=exon15;Parent=tRNA39;Name=trnS(gct)
+MT	GenBank	gene	11375	11447	.	-	1	ID=gene3962;Name=trnD(gtc)
+MT	GenBank	tRNA	11375	11447	.	-	1	ID=tRNA40;Parent=gene3962;Name=trnD(gtc);anticodon=(pos:complement(11412..11414)%2Caa:Asp%2Cseq:gtc);product=tRNA-Asp
+MT	GenBank	exon	11375	11447	.	-	1	ID=exon16;Parent=tRNA40;Name=trnD(gtc)
+MT	GenBank	gene	11471	11541	.	-	1	ID=gene3963;Name=trnG(tcc)
+MT	GenBank	tRNA	11471	11541	.	-	1	ID=tRNA41;Parent=gene3963;Name=trnG(tcc);anticodon=(pos:complement(11507..11509)%2Caa:Gly%2Cseq:tcc);product=tRNA-Gly
+MT	GenBank	exon	11471	11541	.	-	1	ID=exon17;Parent=tRNA41;Name=trnG(tcc)
+MT	GenBank	gene	12565	13374	.	-	1	ID=gene3964;Name=cox3
+MT	GenBank	mRNA	12565	13374	.	-	1	ID=mRNA3921;Parent=gene3964
+MT	GenBank	CDS	12565	13374	.	-	1	ID=CDS7;Parent=mRNA3921;eC_number=1.9.3.1;Name=cox3;codon_start=1;product=cytochrome c oxidase subunit 3;transl_table=4;translation=length.269
+MT	GenBank	exon	12565	13374	.	-	1	ID=exon18;Parent=mRNA3921
+MT	GenBank	gene	13705	14478	.	-	1	ID=gene3965;Name=atp6
+MT	GenBank	mRNA	13705	14478	.	-	1	ID=mRNA3922;Parent=gene3965
+MT	GenBank	CDS	13705	14478	.	-	1	ID=CDS8;Parent=mRNA3922;eC_number=3.6.3.14;Name=atp6;codon_start=1;product=ATP synthase F0 subunit a;transl_table=4;translation=length.257
+MT	GenBank	exon	13705	14478	.	-	1	ID=exon19;Parent=mRNA3922
+MT	GenBank	gene	14618	14764	.	-	1	ID=gene3966;Name=atp8
+MT	GenBank	mRNA	14618	14764	.	-	1	ID=mRNA3923;Parent=gene3966
+MT	GenBank	CDS	14618	14764	.	-	1	ID=CDS9;Parent=mRNA3923;eC_number=3.6.3.14;Name=atp8;codon_start=1;product=ATP synthase F0 subunit 8;transl_table=4;translation=length.48
+MT	GenBank	exon	14618	14764	.	-	1	ID=exon20;Parent=mRNA3923
+MT	GenBank	gene	14843	14915	.	-	1	ID=gene3967;Name=trnV(tac)
+MT	GenBank	tRNA	14843	14915	.	-	1	ID=tRNA42;Parent=gene3967;Name=trnV(tac);anticodon=(pos:complement(14880..14882)%2Caa:Val%2Cseq:tac);product=tRNA-Val
+MT	GenBank	exon	14843	14915	.	-	1	ID=exon21;Parent=tRNA42;Name=trnV(tac)
+MT	GenBank	gene	15001	15073	.	-	1	ID=gene3968;Name=trnM(cat);Note=copy 1
+MT	GenBank	tRNA	15001	15073	.	-	1	ID=tRNA43;Parent=gene3968;Name=trnM(cat);anticodon=(pos:complement(15037..15039)%2Caa:Met%2Cseq:cat);product=tRNA-Met
+MT	GenBank	exon	15001	15073	.	-	1	ID=exon22;Parent=tRNA43;Name=trnM(cat)
+MT	GenBank	gene	15084	15157	.	-	1	ID=gene3969;Name=trnH(gtg)
+MT	GenBank	tRNA	15084	15157	.	-	1	ID=tRNA44;Parent=gene3969;Name=trnH(gtg);anticodon=(pos:complement(15121..15123)%2Caa:His%2Cseq:gtg);product=tRNA-His
+MT	GenBank	exon	15084	15157	.	-	1	ID=exon23;Parent=tRNA44;Name=trnH(gtg)
+MT	GenBank	gene	15162	15881	.	-	1	ID=gene3970;Name=secY
+MT	GenBank	mRNA	15162	15881	.	-	1	ID=mRNA3924;Parent=gene3970
+MT	GenBank	CDS	15162	15881	.	-	1	ID=CDS10;Parent=mRNA3924;Name=secY;codon_start=1;product=SecY-type transporter protein;transl_table=4;translation=length.239
+MT	GenBank	exon	15162	15881	.	-	1	ID=exon24;Parent=mRNA3924
+MT	GenBank	gene	15859	15931	.	-	1	ID=gene3971;Name=trnQ(ttg)
+MT	GenBank	tRNA	15859	15931	.	-	1	ID=tRNA45;Parent=gene3971;Name=trnQ(ttg);anticodon=(pos:complement(15896..15898)%2Caa:Gln%2Cseq:ttg);product=tRNA-Gln
+MT	GenBank	exon	15859	15931	.	-	1	ID=exon25;Parent=tRNA45;Name=trnQ(ttg)
+MT	GenBank	gene	15938	16020	.	-	1	ID=gene3972;Name=trnL(tag)
+MT	GenBank	tRNA	15938	16020	.	-	1	ID=tRNA46;Parent=gene3972;Name=trnL(tag);anticodon=(pos:complement(15984..15986)%2Caa:Leu%2Cseq:tag);product=tRNA-Leu
+MT	GenBank	exon	15938	16020	.	-	1	ID=exon26;Parent=tRNA46;Name=trnL(tag)
+MT	GenBank	gene	16121	16194	.	-	1	ID=gene3973;Name=trnF(gaa)
+MT	GenBank	tRNA	16121	16194	.	-	1	ID=tRNA47;Parent=gene3973;Name=trnF(gaa);anticodon=(pos:complement(16158..16160)%2Caa:Phe%2Cseq:gaa);product=tRNA-Phe
+MT	GenBank	exon	16121	16194	.	-	1	ID=exon27;Parent=tRNA47;Name=trnF(gaa)
+MT	GenBank	gene	16200	16271	.	-	1	ID=gene3974;Name=trnA(tgc)
+MT	GenBank	tRNA	16200	16271	.	-	1	ID=tRNA48;Parent=gene3974;Name=trnA(tgc);anticodon=(pos:complement(16236..16238)%2Caa:Ala%2Cseq:tgc);product=tRNA-Ala
+MT	GenBank	exon	16200	16271	.	-	1	ID=exon28;Parent=tRNA48;Name=trnA(tgc)
+MT	GenBank	gene	16469	16540	.	-	1	ID=gene3975;Name=trnE(ttc)
+MT	GenBank	tRNA	16469	16540	.	-	1	ID=tRNA49;Parent=gene3975;Name=trnE(ttc);anticodon=(pos:complement(16505..16507)%2Caa:Glu%2Cseq:ttc);product=tRNA-Glu
+MT	GenBank	exon	16469	16540	.	-	1	ID=exon29;Parent=tRNA49;Name=trnE(ttc)
+MT	GenBank	gene	16675	16757	.	-	1	ID=gene3976;Name=trnL(taa)
+MT	GenBank	tRNA	16675	16757	.	-	1	ID=tRNA50;Parent=gene3976;Name=trnL(taa);anticodon=(pos:complement(16721..16723)%2Caa:Leu%2Cseq:taa);product=tRNA-Leu
+MT	GenBank	exon	16675	16757	.	-	1	ID=exon30;Parent=tRNA50;Name=trnL(taa)
+MT	GenBank	gene	16775	16847	.	-	1	ID=gene3977;Name=trnM(cat)_2;Note=copy 2
+MT	GenBank	tRNA	16775	16847	.	-	1	ID=tRNA51;Parent=gene3977;Name=trnM(cat)_2;anticodon=(pos:complement(16812..16814)%2Caa:Met%2Cseq:cat);product=tRNA-Met
+MT	GenBank	exon	16775	16847	.	-	1	ID=exon31;Parent=tRNA51;Name=trnM(cat)_2
+MT	GenBank	gene	16934	17004	.	-	1	ID=gene3978;Name=trnM(cat)_3;Note=copy 3
+MT	GenBank	tRNA	16934	17004	.	-	1	ID=tRNA52;Parent=gene3978;Name=trnM(cat)_3;anticodon=(pos:complement(16970..16972)%2Caa:Met%2Cseq:cat);product=tRNA-Met
+MT	GenBank	exon	16934	17004	.	-	1	ID=exon32;Parent=tRNA52;Name=trnM(cat)_3
+MT	GenBank	gene	17031	17101	.	-	1	ID=gene3979;Name=trnT(tgt)
+MT	GenBank	tRNA	17031	17101	.	-	1	ID=tRNA53;Parent=gene3979;Name=trnT(tgt);anticodon=(pos:complement(17067..17069)%2Caa:Thr%2Cseq:tgt);product=tRNA-Thr
+MT	GenBank	exon	17031	17101	.	-	1	ID=exon33;Parent=tRNA53;Name=trnT(tgt)
+MT	GenBank	gene	17161	17913	.	-	1	ID=gene3980;Name=cox2
+MT	GenBank	mRNA	17161	17913	.	-	1	ID=mRNA3925;Parent=gene3980
+MT	GenBank	CDS	17161	17913	.	-	1	ID=CDS11;Parent=mRNA3925;eC_number=1.9.3.1;Name=cox2;codon_start=1;product=cytochrome c oxidase subunit 2;transl_table=4;translation=length.250
+MT	GenBank	exon	17161	17913	.	-	1	ID=exon34;Parent=mRNA3925
+MT	GenBank	gene	18037	18107	.	-	1	ID=gene3981;Name=trnR(tct)
+MT	GenBank	tRNA	18037	18107	.	-	1	ID=tRNA54;Parent=gene3981;Name=trnR(tct);anticodon=(pos:complement(18073..18075)%2Caa:Arg%2Cseq:tct);product=tRNA-Arg
+MT	GenBank	exon	18037	18107	.	-	1	ID=exon35;Parent=tRNA54;Name=trnR(tct)
+MT	GenBank	gene	18235	18306	.	-	1	ID=gene3982;Name=trnC(gca)
+MT	GenBank	tRNA	18235	18306	.	-	1	ID=tRNA55;Parent=gene3982;Name=trnC(gca);anticodon=(pos:complement(18271..18273)%2Caa:Cys%2Cseq:gca);product=tRNA-Cys
+MT	GenBank	exon	18235	18306	.	-	1	ID=exon36;Parent=tRNA55;Name=trnC(gca)
+MT	GenBank	gene	18344	18416	.	-	1	ID=gene3983;Name=trnR(acg)
+MT	GenBank	tRNA	18344	18416	.	-	1	ID=tRNA56;Parent=gene3983;Name=trnR(acg);anticodon=(pos:complement(18381..18383)%2Caa:Arg%2Cseq:acg);product=tRNA-Arg
+MT	GenBank	exon	18344	18416	.	-	1	ID=exon37;Parent=tRNA56;Name=trnR(acg)
+MT	GenBank	gene	18443	18513	.	-	1	ID=gene3984;Name=trnN(gtt)
+MT	GenBank	tRNA	18443	18513	.	-	1	ID=tRNA57;Parent=gene3984;Name=trnN(gtt);anticodon=(pos:complement(18479..18481)%2Caa:Asn%2Cseq:gtt);product=tRNA-Asn
+MT	GenBank	exon	18443	18513	.	-	1	ID=exon38;Parent=tRNA57;Name=trnN(gtt)
+MT	GenBank	gene	18607	18691	.	-	1	ID=gene3985;Name=trnY(gta)
+MT	GenBank	tRNA	18607	18691	.	-	1	ID=tRNA58;Parent=gene3985;Name=trnY(gta);anticodon=(pos:complement(18653..18655)%2Caa:Tyr%2Cseq:gta);product=tRNA-Tyr
+MT	GenBank	exon	18607	18691	.	-	1	ID=exon39;Parent=tRNA58;Name=trnY(gta)
+MT	GenBank	gene	18849	19223	.	-	1	ID=gene3986;Name=nad3
+MT	GenBank	mRNA	18849	19223	.	-	1	ID=mRNA3926;Parent=gene3986
+MT	GenBank	CDS	18849	19223	.	-	1	ID=CDS12;Parent=mRNA3926;eC_number=1.6.5.3;Name=nad3;codon_start=1;product=NADH dehydrogenase subunit 3;transl_table=4;translation=length.124
+MT	GenBank	exon	18849	19223	.	-	1	ID=exon40;Parent=mRNA3926
+MT	GenBank	gene	19224	20957	.	-	1	ID=gene3987;Name=nad2
+MT	GenBank	mRNA	19224	20957	.	-	1	ID=mRNA3927;Parent=gene3987
+MT	GenBank	CDS	19224	20957	.	-	1	ID=CDS13;Parent=mRNA3927;eC_number=1.6.5.3;Name=nad2;codon_start=1;product=NADH dehydrogenase subunit 2;transl_table=4;translation=length.577
+MT	GenBank	exon	19224	20957	.	-	1	ID=exon41;Parent=mRNA3927
+MT	GenBank	gene	20965	22926	.	-	1	ID=gene3988;Name=nad5
+MT	GenBank	mRNA	20965	22926	.	-	1	ID=mRNA3928;Parent=gene3988
+MT	GenBank	CDS	20965	22926	.	-	1	ID=CDS14;Parent=mRNA3928;eC_number=1.6.5.3;Name=nad5;codon_start=1;product=NADH dehydrogenase subunit 5;transl_table=4;translation=length.653
+MT	GenBank	exon	20965	22926	.	-	1	ID=exon42;Parent=mRNA3928
+MT	GenBank	gene	22926	23195	.	-	1	ID=gene3989;Name=nad4L
+MT	GenBank	mRNA	22926	23195	.	-	1	ID=mRNA3929;Parent=gene3989
+MT	GenBank	CDS	22926	23195	.	-	1	ID=CDS15;Parent=mRNA3929;eC_number=1.6.5.3;Name=nad4L;codon_start=1;product=NADH dehydrogenase subunit 4L;transl_table=4;translation=length.89
+MT	GenBank	exon	22926	23195	.	-	1	ID=exon43;Parent=mRNA3929
+MT	GenBank	gene	23709	24869	.	-	1	ID=gene3990;Name=cob
+MT	GenBank	mRNA	23709	24869	.	-	1	ID=mRNA3930;Parent=gene3990
+MT	GenBank	CDS	23709	24869	.	-	1	ID=CDS16;Parent=mRNA3930;eC_number=1.10.2.2;Name=cob;codon_start=1;product=apocytochrome b;transl_table=4;translation=length.386
+MT	GenBank	exon	23709	24869	.	-	1	ID=exon44;Parent=mRNA3930
+MT	GenBank	gene	25004	26590	.	-	1	ID=gene3991;Name=cox1
+MT	GenBank	mRNA	25004	26590	.	-	1	ID=mRNA3931;Parent=gene3991
+MT	GenBank	CDS	25004	26590	.	-	1	ID=CDS17;Parent=mRNA3931;eC_number=1.9.3.1;Name=cox1;codon_start=1;product=cytochrome c oxidase subunit 1;transl_table=4;translation=length.528
+MT	GenBank	exon	25004	26590	.	-	1	ID=exon45;Parent=mRNA3931
+MT	GenBank	gene	26818	26889	.	-	1	ID=gene3992;Name=trnK(ttt)_2;Note=copy 2
+MT	GenBank	tRNA	26818	26889	.	-	1	ID=tRNA59;Parent=gene3992;Name=trnK(ttt)_2;anticodon=(pos:complement(26855..26857)%2Caa:Lys%2Cseq:ttt);product=tRNA-Lys
+MT	GenBank	exon	26818	26889	.	-	1	ID=exon46;Parent=tRNA59;Name=trnK(ttt)_2
+MT	GenBank	gene	27557	29014	.	-	1	ID=gene3993;Name=nad4_2;Note=copy 2
+MT	GenBank	mRNA	27557	29014	.	-	1	ID=mRNA3932;Parent=gene3993
+MT	GenBank	CDS	27557	29014	.	-	1	ID=CDS18;Parent=mRNA3932;eC_number=1.6.5.3;Name=nad4_2;codon_start=1;product=NADH dehydrogenase subunit 4;transl_table=4;translation=length.485
+MT	GenBank	exon	27557	29014	.	-	1	ID=exon47;Parent=mRNA3932
+MT	GenBank	gene	29201	29866	.	-	1	ID=gene3994;Name=nad6_2;Note=copy 2
+MT	GenBank	mRNA	29201	29866	.	-	1	ID=mRNA3933;Parent=gene3994
+MT	GenBank	CDS	29201	29866	.	-	1	ID=CDS19;Parent=mRNA3933;eC_number=1.6.5.3;Name=nad6_2;codon_start=1;product=NADH dehydrogenase subunit 6;transl_table=4;translation=length.221
+MT	GenBank	exon	29201	29866	.	-	1	ID=exon48;Parent=mRNA3933
+MT	GenBank	gene	30068	31144	.	-	1	ID=gene3995;Name=nad1_2;Note=copy 2
+MT	GenBank	mRNA	30068	31144	.	-	1	ID=mRNA3934;Parent=gene3995
+MT	GenBank	CDS	30068	31144	.	-	1	ID=CDS20;Parent=mRNA3934;eC_number=1.6.5.3;Name=nad1_2;codon_start=1;product=NADH dehydrogenase subunit 1;transl_table=4;translation=length.358
+MT	GenBank	exon	30068	31144	.	-	1	ID=exon49;Parent=mRNA3934
+MT	GenBank	gene	31514	32218	.	-	1	ID=gene3996;Name=orf234_2;Note=copy 2
+MT	GenBank	mRNA	31514	32218	.	-	1	ID=mRNA3935;Parent=gene3996
+MT	GenBank	CDS	31514	32218	.	-	1	ID=CDS21;Parent=mRNA3935;Name=orf234_2;codon_start=1;product=hypothetical protein;transl_table=4;translation=length.234
+MT	GenBank	exon	31514	32218	.	-	1	ID=exon50;Parent=mRNA3935
+MT	GenBank	gene	32208	32432	.	-	1	ID=gene3997;Name=atp9_3;Note=copy 3
+MT	GenBank	mRNA	32208	32432	.	-	1	ID=mRNA3936;Parent=gene3997
+MT	GenBank	CDS	32208	32432	.	-	1	ID=CDS22;Parent=mRNA3936;eC_number=3.6.3.14;Name=atp9_3;codon_start=1;product=ATP synthase F0 subunit c;transl_table=4;translation=length.74
+MT	GenBank	exon	32208	32432	.	-	1	ID=exon51;Parent=mRNA3936
+MT	GenBank	gene	32734	32889	.	-	1	ID=gene3998;Name=atp9_4;Note=copy 4
+MT	GenBank	mRNA	32734	32889	.	-	1	ID=mRNA3937;Parent=gene3998
+MT	GenBank	CDS	32734	32889	.	-	1	ID=CDS23;Parent=mRNA3937;eC_number=3.6.3.14;Name=atp9_4;codon_start=1;product=ATP synthase F0 subunit c;transl_table=4;translation=length.51
+MT	GenBank	exon	32734	32889	.	-	1	ID=exon52;Parent=mRNA3937
+MT	GenBank	gene	33018	33088	.	-	1	ID=gene3999;Name=trnR(cct)_2;Note=copy 2
+MT	GenBank	tRNA	33018	33088	.	-	1	ID=tRNA60;Parent=gene3999;Name=trnR(cct)_2;anticodon=(pos:complement(33054..33056)%2Caa:Arg%2Cseq:cct);product=tRNA-Arg
+MT	GenBank	exon	33018	33088	.	-	1	ID=exon53;Parent=tRNA60;Name=trnR(cct)_2
