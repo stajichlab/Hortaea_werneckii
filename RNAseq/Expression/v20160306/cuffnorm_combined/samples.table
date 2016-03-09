@@ -1,0 +1,7 @@
+sample_id	file	total_mass	internal_scale	external_scale
+Sample_10.1_0	Sample_10.1.cuffquant/abundances.cxb	4.45768e+07	0.615328	1
+Sample_10.2_0	Sample_10.2.cuffquant/abundances.cxb	1.2442e+08	1.78017	1
+Sample_20.1_0	Sample_20.1.cuffquant/abundances.cxb	1.24819e+08	1.80924	1
+Sample_20.2_0	Sample_20.2.cuffquant/abundances.cxb	1.08961e+08	1.5548	1
+Sample_0.1_0	Sample_0.1.cuffquant/abundances.cxb	7.23496e+07	0.68593	1
+Sample_0.2_0	Sample_0.2.cuffquant/abundances.cxb	4.75982e+07	0.483393	1
