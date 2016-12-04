@@ -26,7 +26,7 @@ i23 <- intersect(rownames(Salt10exp),rownames(Salt20exp))
 iall <- intersect(intersect(i12,i13),i23)
 
 # unique in Salt0
-setdiff(Salt0exp)
+#setdiff(Salt0exp)
 
 venn.in <- list()
 totlen = length(rownames(fpkm))
